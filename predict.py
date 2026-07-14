@@ -13,6 +13,8 @@ from tqdm import tqdm
 
 from model import SkeletonAwareUNet
 
+from topology_postprocess import full_pipeline
+
 from config import (
     TEST_IMAGE_DIR,
     DEVICE,
@@ -43,7 +45,7 @@ print("Model Loaded Successfully")
 # Test Images
 # ==========================================================
 
-output_dir = "Dataset/OCTA-500/Output"
+output_dir = "Dataset/OCTA-500/Output_clDice"
 
 os.makedirs(output_dir, exist_ok=True)
 
@@ -88,7 +90,23 @@ with torch.no_grad():
         prediction = prediction.squeeze().cpu().numpy()
 
         # Convert probability map to binary mask
-        prediction = (prediction > 0.5).astype(np.uint8) * 255
+        prediction = (prediction > 0.45).astype(np.uint8) * 255
+
+
+
+        # ==========================================================
+        # Topology-aware Post Processing
+        # ==========================================================
+
+        cleaned_prediction, flagged_points = full_pipeline(prediction)
+
+        prediction = cleaned_prediction * 255
+        prediction = prediction.astype(np.uint8)
+
+
+        print(
+    f"{image_name} : {len(flagged_points)} candidate false connections detected"
+)
 
         # Save prediction
         save_path = os.path.join(output_dir, image_name)
