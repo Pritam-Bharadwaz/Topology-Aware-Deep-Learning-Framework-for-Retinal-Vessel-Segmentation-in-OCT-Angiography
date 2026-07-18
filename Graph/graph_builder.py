@@ -1,147 +1,285 @@
-"""
-Graph Builder Version 2
------------------------
-Enhancements over Version 1:
-- Stores node attributes (x, y, degree, node_type)
-- Stores edge attributes (length, path coordinates)
-- Exports GraphML
+"""Graph Builder V3: convert OCTA binary vessel masks to GraphML graphs.
+
+This module deliberately excludes visualization and CSV statistics export.
 """
 
-import os
-import cv2
+from __future__ import annotations
+
+import argparse
 import json
-import numpy as np
+from dataclasses import dataclass
+from pathlib import Path
+
+import cv2
 import networkx as nx
-from scipy.ndimage import convolve
+import numpy as np
+from scipy import ndimage as ndi
 from skimage.morphology import skeletonize
 
-INPUT_DIR = "Dataset/OCTA-500/Output_clDice"
-OUTPUT_DIR = "Graph/Graphs"
+# Internal pixels use (row, column); exported coordinates use (x=column, y=row).
+Pixel = tuple[int, int]
+NEIGHBOUR_OFFSETS: tuple[Pixel, ...] = tuple(
+    (dr, dc) for dr in (-1, 0, 1) for dc in (-1, 0, 1) if (dr, dc) != (0, 0)
+)
 
-os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-KERNEL = np.array([[1,1,1],[1,10,1],[1,1,1]], dtype=np.uint8)
-OFFSETS=[(-1,-1),(-1,0),(-1,1),(0,-1),(0,1),(1,-1),(1,0),(1,1)]
+@dataclass(frozen=True)
+class GraphBuildResult:
+    """Graph and requested counts produced for one vessel mask."""
 
-def load_mask(path):
-    img=cv2.imread(path,cv2.IMREAD_GRAYSCALE)
-    if img is None:
-        raise FileNotFoundError(path)
-    return (img>0).astype(np.uint8)
+    graph: nx.Graph
+    endpoint_count: int
+    branch_point_count: int
+    skeleton_component_count: int
 
-def get_skeleton(mask):
-    return skeletonize(mask).astype(np.uint8)
 
-def detect_nodes(skel):
-    conv=convolve(skel.astype(np.uint8),KERNEL)
-    endpoints=np.argwhere((skel==1)&(conv==11))
-    branchpoints=np.argwhere((skel==1)&(conv>=13))
-    return endpoints,branchpoints
+def load_binary_mask(image_path: Path) -> np.ndarray:
+    """Load a BMP mask as a boolean foreground image."""
+    image = cv2.imread(str(image_path), cv2.IMREAD_GRAYSCALE)
+    if image is None:
+        raise ValueError(f"Could not read image: {image_path}")
+    return image > 0
 
-def neighbours(skel,pixel,prev=None):
-    y,x=pixel
-    out=[]
-    for dy,dx in OFFSETS:
-        yy,xx=y+dy,x+dx
-        if 0<=yy<skel.shape[0] and 0<=xx<skel.shape[1]:
-            if skel[yy,xx] and (yy,xx)!=prev:
-                out.append((yy,xx))
-    return out
 
-def build_graph(skel):
-    ep,bp=detect_nodes(skel)
-    G=nx.Graph()
-    node_map={}
-    nid=0
+def remove_tiny_components(mask: np.ndarray, min_component_size: int) -> np.ndarray:
+    """Remove 8-connected vessel components smaller than the given size."""
+    if min_component_size < 1:
+        raise ValueError("min_component_size must be at least 1")
 
-    for pts,tp in [(ep,"endpoint"),(bp,"branch")]:
-        for y,x in pts:
-            node_map[(int(y),int(x))]=nid
-            G.add_node(
-                nid,
-                x=int(x),
-                y=int(y),
-                node_type=tp
-            )
-            nid+=1
+    labels, component_count = ndi.label(mask, structure=np.ones((3, 3), dtype=np.uint8))
+    if component_count == 0:
+        return np.zeros_like(mask, dtype=bool)
 
-    visited_edges=set()
+    sizes = np.bincount(labels.ravel())
+    keep = sizes >= min_component_size
+    keep[0] = False  # Never retain the background label.
+    return keep[labels]
 
-    for start_pixel,start_id in node_map.items():
-        for nxt in neighbours(skel,start_pixel):
-            prev=start_pixel
-            cur=nxt
-            path=[start_pixel]
 
-            while True:
-                path.append(cur)
+def skeleton_neighbours(pixel: Pixel, skeleton: np.ndarray) -> list[Pixel]:
+    """Return all in-bounds 8-connected skeleton neighbours of ``pixel``."""
+    row, column = pixel
+    height, width = skeleton.shape
+    neighbours: list[Pixel] = []
+    for dr, dc in NEIGHBOUR_OFFSETS:
+        next_row, next_column = row + dr, column + dc
+        if 0 <= next_row < height and 0 <= next_column < width:
+            if skeleton[next_row, next_column]:
+                neighbours.append((next_row, next_column))
+    return neighbours
 
-                if cur in node_map and cur!=start_pixel:
-                    end_id=node_map[cur]
-                    key=tuple(sorted((start_id,end_id)))
-                    if key not in visited_edges:
-                        visited_edges.add(key)
-                        G.add_edge(
-                            start_id,
-                            end_id,
-                            length=len(path),
-                            path=json.dumps([(int(p[1]),int(p[0])) for p in path])
-                        )
-                    break
 
-                nbs=neighbours(skel,cur,prev)
+def count_skeleton_neighbours(skeleton: np.ndarray) -> np.ndarray:
+    """Explicitly count 8-neighbours; no convolution threshold is used."""
+    counts = np.zeros(skeleton.shape, dtype=np.uint8)
+    for row, column in np.argwhere(skeleton):
+        counts[row, column] = len(skeleton_neighbours((int(row), int(column)), skeleton))
+    return counts
 
-                if len(nbs)==0:
-                    break
 
-                prev=cur
-                cur=nbs[0]
+def detect_graph_nodes(neighbour_counts: np.ndarray) -> tuple[set[Pixel], set[Pixel]]:
+    """Detect endpoints (one neighbour) and branch points (three or more)."""
+    endpoints = {tuple(map(int, p)) for p in np.argwhere(neighbour_counts == 1)}
+    branches = {tuple(map(int, p)) for p in np.argwhere(neighbour_counts >= 3)}
+    return endpoints, branches
 
-    for n in G.nodes:
-        G.nodes[n]["degree"]=G.degree[n]
 
-    return G,ep,bp
+def trace_edge_dfs(
+    start: Pixel,
+    first_pixel: Pixel,
+    skeleton: np.ndarray,
+    node_pixels: set[Pixel],
+) -> list[Pixel] | None:
+    """Trace one node-to-node vessel segment with iterative DFS.
 
-def visualize(skel,ep,bp):
-    vis=np.dstack([skel*255]*3)
-    for y,x in ep:
-        cv2.circle(vis,(int(x),int(y)),3,(0,255,0),-1)
-    for y,x in bp:
-        cv2.circle(vis,(int(x),int(y)),3,(0,0,255),-1)
-    return vis
+    A local visited set prevents a malformed skeleton loop from causing an
+    infinite search. The caller maintains global visited pixels for accepted
+    edges, so the same vessel segment is never traced twice.
+    """
+    if first_pixel in node_pixels:
+        return [start, first_pixel]
 
-def process(image_path):
-    name=os.path.basename(image_path)
-    mask=load_mask(image_path)
-    skel=get_skeleton(mask)
+    stack: list[tuple[Pixel, list[Pixel]]] = [(first_pixel, [start, first_pixel])]
+    local_visited: set[Pixel] = {start, first_pixel}
 
-    G,ep,bp=build_graph(skel)
+    while stack:
+        current, path = stack.pop()
+        for neighbour in skeleton_neighbours(current, skeleton):
+            if neighbour == start or neighbour in local_visited:
+                continue
+            candidate = path + [neighbour]
+            if neighbour in node_pixels:
+                return candidate
+            local_visited.add(neighbour)
+            stack.append((neighbour, candidate))
+    return None
 
-    out=os.path.join(OUTPUT_DIR,os.path.splitext(name)[0]+".graphml")
-    nx.write_graphml(G,out)
 
-    print("="*60)
-    print("Image :",name)
-    print("Nodes :",G.number_of_nodes())
-    print("Edges :",G.number_of_edges())
-    print("Endpoints :",len(ep))
-    print("Branch Points :",len(bp))
-    print("Connected Components :",nx.number_connected_components(G))
-    print("="*60)
+def canonical_path(path: list[Pixel]) -> tuple[Pixel, ...]:
+    """Return orientation-independent path coordinates for duplicate checks."""
+    forward = tuple(path)
+    backward = tuple(reversed(path))
+    return min(forward, backward)
 
-    img=visualize(skel,ep,bp)
-    cv2.imshow("Skeleton Graph V2",img)
-    if cv2.waitKey(0)==27:
-        return False
-    return True
 
-def main():
-    files=sorted(f for f in os.listdir(INPUT_DIR) if f.lower().endswith(".bmp"))
-    print("Images Found:",len(files))
-    for f in files:
-        if not process(os.path.join(INPUT_DIR,f)):
-            break
-    cv2.destroyAllWindows()
+def edge_attributes(path: list[Pixel]) -> dict[str, float | str]:
+    """Calculate edge length, ordered path, Euclidean distance and tortuosity."""
+    length = float(
+        sum(np.hypot(b[0] - a[0], b[1] - a[1]) for a, b in zip(path, path[1:]))
+    )
+    euclidean_distance = float(np.hypot(path[-1][0] - path[0][0], path[-1][1] - path[0][1]))
+    tortuosity = length / euclidean_distance if euclidean_distance > 0 else 1.0
+    # GraphML supports scalar values, therefore the ordered coordinate list is JSON.
+    path_coordinates = json.dumps([[column, row] for row, column in path], separators=(",", ":"))
+    return {
+        "length": length,
+        "path_coordinates": path_coordinates,
+        "euclidean_distance": euclidean_distance,
+        "tortuosity": float(tortuosity),
+    }
 
-if __name__=="__main__":
+
+def build_vessel_graph(mask: np.ndarray, min_component_size: int) -> GraphBuildResult:
+    """Build a vessel graph from one binary mask.
+
+    Nodes are only endpoints and branch points. DFS is launched from every
+    node-neighbour pair. Interior pixels of each accepted edge are added to a
+    global visited-pixel set; direct node-node links are tracked separately.
+    """
+    cleaned_mask = remove_tiny_components(mask, min_component_size)
+    skeleton = skeletonize(cleaned_mask)
+    _, skeleton_component_count = ndi.label(
+        skeleton, structure=np.ones((3, 3), dtype=np.uint8)
+    )
+
+    neighbour_counts = count_skeleton_neighbours(skeleton)
+    endpoints, branches = detect_graph_nodes(neighbour_counts)
+    node_pixels = endpoints | branches
+
+    graph = nx.Graph()
+    pixel_to_node: dict[Pixel, str] = {}
+    for index, pixel in enumerate(sorted(node_pixels)):
+        row, column = pixel
+        node_id = f"node_{index}"
+        graph.add_node(
+            node_id,
+            id=node_id,
+            x=int(column),
+            y=int(row),
+            degree=int(neighbour_counts[row, column]),
+            node_type="endpoint" if pixel in endpoints else "branch",
+        )
+        pixel_to_node[pixel] = node_id
+
+    visited_pixels: set[Pixel] = set()
+    visited_direct_links: set[frozenset[Pixel]] = set()
+    seen_paths: set[tuple[Pixel, ...]] = set()
+
+    for start in sorted(node_pixels):
+        for first_pixel in skeleton_neighbours(start, skeleton):
+            direct_link = frozenset((start, first_pixel))
+            if first_pixel not in node_pixels and first_pixel in visited_pixels:
+                continue
+            if first_pixel in node_pixels and direct_link in visited_direct_links:
+                continue
+
+            path = trace_edge_dfs(start, first_pixel, skeleton, node_pixels)
+            if path is None or len(path) < 2:
+                continue
+
+            end = path[-1]
+            unique_path = canonical_path(path)
+            if end == start or unique_path in seen_paths:
+                continue
+
+            source, target = pixel_to_node[start], pixel_to_node[end]
+            # Simple Graph plus canonical paths prevents duplicated graph edges.
+            if graph.has_edge(source, target):
+                continue
+
+            graph.add_edge(source, target, **edge_attributes(path))
+            seen_paths.add(unique_path)
+            visited_pixels.update(pixel for pixel in path[1:-1] if pixel not in node_pixels)
+            if first_pixel in node_pixels:
+                visited_direct_links.add(direct_link)
+
+    return GraphBuildResult(
+        graph=graph,
+        endpoint_count=len(endpoints),
+        branch_point_count=len(branches),
+        skeleton_component_count=int(skeleton_component_count),
+    )
+
+
+def print_summary(image_path: Path, result: GraphBuildResult) -> None:
+    """Print the requested graph-construction summary for one input mask."""
+    graph = result.graph
+    node_count = graph.number_of_nodes()
+    edge_count = graph.number_of_edges()
+    average_degree = sum(dict(graph.degree()).values()) / node_count if node_count else 0.0
+    average_length = (
+        sum(float(data["length"]) for _, _, data in graph.edges(data=True)) / edge_count
+        if edge_count else 0.0
+    )
+    print(f"\n{image_path.name}")
+    print(f"  nodes: {node_count}")
+    print(f"  edges: {edge_count}")
+    print(f"  endpoints: {result.endpoint_count}")
+    print(f"  branch points: {result.branch_point_count}")
+    print(f"  connected components: {result.skeleton_component_count}")
+    print(f"  average node degree: {average_degree:.3f}")
+    print(f"  average edge length: {average_length:.3f}")
+
+
+def process_masks(input_directory: Path, output_directory: Path, min_component_size: int) -> None:
+    """Build and save one ``.graphml`` file for every input BMP mask."""
+    if not input_directory.is_dir():
+        raise FileNotFoundError(f"Input directory does not exist: {input_directory}")
+
+    output_directory.mkdir(parents=True, exist_ok=True)
+    image_paths = sorted(input_directory.glob("*.bmp"))
+    if not image_paths:
+        print(f"No BMP masks found in: {input_directory}")
+        return
+
+    for image_path in image_paths:
+        result = build_vessel_graph(load_binary_mask(image_path), min_component_size)
+        output_path = output_directory / f"{image_path.stem}.graphml"
+        nx.write_graphml(result.graph, output_path, named_key_ids=True)
+        print_summary(image_path, result)
+        print(f"  saved: {output_path}")
+
+
+def parse_arguments() -> argparse.Namespace:
+    """Parse batch-processing options."""
+    project_root = Path(__file__).resolve().parent.parent
+    parser = argparse.ArgumentParser(description="OCTA vessel Graph Builder V3")
+    parser.add_argument(
+        "--input-directory",
+        type=Path,
+        default=project_root / "Dataset" / "OCTA-500" / "Output_clDice",
+        help="Directory containing binary .bmp vessel masks.",
+    )
+    parser.add_argument(
+        "--output-directory",
+        type=Path,
+        default=project_root / "Graph" / "Graphs",
+        help="Directory where .graphml files will be written.",
+    )
+    parser.add_argument(
+        "--min-component-size",
+        type=int,
+        default=10,
+        help="Remove vessel components smaller than this many pixels (default: 10).",
+    )
+    return parser.parse_args()
+
+
+def main() -> None:
+    """Run Graph Builder V3."""
+    arguments = parse_arguments()
+    process_masks(arguments.input_directory, arguments.output_directory, arguments.min_component_size)
+
+
+if __name__ == "__main__":
     main()
