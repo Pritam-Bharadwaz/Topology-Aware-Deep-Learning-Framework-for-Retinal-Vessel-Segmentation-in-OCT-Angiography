@@ -1,1093 +1,1079 @@
 <?xml version='1.0' encoding='utf-8'?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
-  <key id="d5" for="edge" attr.name="path" attr.type="string" />
-  <key id="d4" for="edge" attr.name="length" attr.type="long" />
-  <key id="d3" for="node" attr.name="degree" attr.type="long" />
-  <key id="d2" for="node" attr.name="node_type" attr.type="string" />
-  <key id="d1" for="node" attr.name="y" attr.type="long" />
-  <key id="d0" for="node" attr.name="x" attr.type="long" />
+  <key id="tortuosity" for="edge" attr.name="tortuosity" attr.type="double" />
+  <key id="euclidean_distance" for="edge" attr.name="euclidean_distance" attr.type="double" />
+  <key id="path_coordinates" for="edge" attr.name="path_coordinates" attr.type="string" />
+  <key id="length" for="edge" attr.name="length" attr.type="double" />
+  <key id="node_type" for="node" attr.name="node_type" attr.type="string" />
+  <key id="degree" for="node" attr.name="degree" attr.type="long" />
+  <key id="y" for="node" attr.name="y" attr.type="long" />
+  <key id="x" for="node" attr.name="x" attr.type="long" />
+  <key id="id" for="node" attr.name="id" attr.type="string" />
   <graph edgedefault="undirected">
-    <node id="0">
-      <data key="d0">124</data>
-      <data key="d1">1</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="1">
-      <data key="d0">265</data>
-      <data key="d1">1</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="2">
-      <data key="d0">276</data>
-      <data key="d1">1</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="3">
-      <data key="d0">93</data>
-      <data key="d1">2</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="4">
-      <data key="d0">196</data>
-      <data key="d1">7</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="5">
-      <data key="d0">295</data>
-      <data key="d1">10</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="6">
-      <data key="d0">200</data>
-      <data key="d1">13</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="7">
-      <data key="d0">281</data>
-      <data key="d1">13</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="8">
-      <data key="d0">1</data>
-      <data key="d1">24</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="9">
-      <data key="d0">257</data>
-      <data key="d1">28</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="10">
-      <data key="d0">117</data>
-      <data key="d1">30</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="11">
-      <data key="d0">299</data>
-      <data key="d1">33</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="12">
-      <data key="d0">110</data>
-      <data key="d1">36</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="13">
-      <data key="d0">77</data>
-      <data key="d1">38</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="14">
-      <data key="d0">174</data>
-      <data key="d1">46</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="15">
-      <data key="d0">145</data>
-      <data key="d1">60</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="16">
-      <data key="d0">1</data>
-      <data key="d1">62</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="17">
-      <data key="d0">108</data>
-      <data key="d1">74</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="18">
-      <data key="d0">273</data>
-      <data key="d1">75</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="19">
-      <data key="d0">183</data>
-      <data key="d1">88</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="20">
-      <data key="d0">1</data>
-      <data key="d1">89</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="21">
-      <data key="d0">104</data>
-      <data key="d1">103</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="22">
-      <data key="d0">119</data>
-      <data key="d1">107</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="23">
-      <data key="d0">292</data>
-      <data key="d1">107</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="24">
-      <data key="d0">60</data>
-      <data key="d1">109</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="25">
-      <data key="d0">92</data>
-      <data key="d1">123</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="26">
-      <data key="d0">223</data>
-      <data key="d1">130</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="27">
-      <data key="d0">53</data>
-      <data key="d1">143</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="28">
-      <data key="d0">82</data>
-      <data key="d1">168</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="29">
-      <data key="d0">25</data>
-      <data key="d1">177</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="30">
-      <data key="d0">53</data>
-      <data key="d1">177</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="31">
-      <data key="d0">40</data>
-      <data key="d1">179</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="32">
-      <data key="d0">279</data>
-      <data key="d1">179</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="33">
-      <data key="d0">34</data>
-      <data key="d1">181</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="34">
-      <data key="d0">114</data>
-      <data key="d1">181</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="35">
-      <data key="d0">2</data>
-      <data key="d1">185</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="36">
-      <data key="d0">242</data>
-      <data key="d1">199</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="37">
-      <data key="d0">66</data>
-      <data key="d1">205</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="38">
-      <data key="d0">191</data>
-      <data key="d1">209</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="39">
-      <data key="d0">107</data>
-      <data key="d1">214</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="40">
-      <data key="d0">209</data>
-      <data key="d1">224</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="41">
-      <data key="d0">146</data>
-      <data key="d1">226</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="42">
-      <data key="d0">74</data>
-      <data key="d1">233</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="43">
-      <data key="d0">1</data>
-      <data key="d1">234</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="44">
-      <data key="d0">52</data>
-      <data key="d1">249</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="45">
-      <data key="d0">58</data>
-      <data key="d1">256</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="46">
-      <data key="d0">296</data>
-      <data key="d1">260</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="47">
-      <data key="d0">42</data>
-      <data key="d1">272</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="48">
-      <data key="d0">66</data>
-      <data key="d1">278</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="49">
-      <data key="d0">239</data>
-      <data key="d1">279</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="50">
-      <data key="d0">229</data>
-      <data key="d1">301</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="51">
-      <data key="d0">15</data>
-      <data key="d1">302</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="52">
-      <data key="d0">63</data>
-      <data key="d1">302</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="53">
-      <data key="d0">88</data>
-      <data key="d1">302</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="54">
-      <data key="d0">195</data>
-      <data key="d1">302</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="55">
-      <data key="d0">258</data>
-      <data key="d1">302</data>
-      <data key="d2">endpoint</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="56">
-      <data key="d0">125</data>
-      <data key="d1">0</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="57">
-      <data key="d0">169</data>
-      <data key="d1">0</data>
-      <data key="d2">branch</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="58">
-      <data key="d0">170</data>
-      <data key="d1">0</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="59">
-      <data key="d0">171</data>
-      <data key="d1">0</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="60">
-      <data key="d0">261</data>
-      <data key="d1">0</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="61">
-      <data key="d0">262</data>
-      <data key="d1">0</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="62">
-      <data key="d0">263</data>
-      <data key="d1">0</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="63">
-      <data key="d0">279</data>
-      <data key="d1">0</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="64">
-      <data key="d0">280</data>
-      <data key="d1">0</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="65">
-      <data key="d0">281</data>
-      <data key="d1">0</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="66">
-      <data key="d0">282</data>
-      <data key="d1">0</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="67">
-      <data key="d0">283</data>
-      <data key="d1">0</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="68">
-      <data key="d0">284</data>
-      <data key="d1">0</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="69">
-      <data key="d0">285</data>
-      <data key="d1">0</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="70">
-      <data key="d0">0</data>
-      <data key="d1">20</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="71">
-      <data key="d0">0</data>
-      <data key="d1">21</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="72">
-      <data key="d0">0</data>
-      <data key="d1">22</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="73">
-      <data key="d0">0</data>
-      <data key="d1">23</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="74">
-      <data key="d0">108</data>
-      <data key="d1">27</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="75">
-      <data key="d0">108</data>
-      <data key="d1">28</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="76">
-      <data key="d0">109</data>
-      <data key="d1">28</data>
-      <data key="d2">branch</data>
-      <data key="d3">4</data>
-    </node>
-    <node id="77">
-      <data key="d0">108</data>
-      <data key="d1">29</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="78">
-      <data key="d0">150</data>
-      <data key="d1">32</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="79">
-      <data key="d0">150</data>
-      <data key="d1">33</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="80">
-      <data key="d0">151</data>
-      <data key="d1">33</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="81">
-      <data key="d0">148</data>
-      <data key="d1">46</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="82">
-      <data key="d0">141</data>
-      <data key="d1">49</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="83">
-      <data key="d0">142</data>
-      <data key="d1">49</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="84">
-      <data key="d0">143</data>
-      <data key="d1">49</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="85">
-      <data key="d0">142</data>
-      <data key="d1">50</data>
-      <data key="d2">branch</data>
-      <data key="d3">4</data>
-    </node>
-    <node id="86">
-      <data key="d0">0</data>
-      <data key="d1">90</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="87">
-      <data key="d0">0</data>
-      <data key="d1">91</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="88">
-      <data key="d0">0</data>
-      <data key="d1">92</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="89">
-      <data key="d0">237</data>
-      <data key="d1">111</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="90">
-      <data key="d0">237</data>
-      <data key="d1">112</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="91">
-      <data key="d0">238</data>
-      <data key="d1">112</data>
-      <data key="d2">branch</data>
-      <data key="d3">4</data>
-    </node>
-    <node id="92">
-      <data key="d0">237</data>
-      <data key="d1">113</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="93">
-      <data key="d0">0</data>
-      <data key="d1">114</data>
-      <data key="d2">branch</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="94">
-      <data key="d0">0</data>
-      <data key="d1">115</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="95">
-      <data key="d0">0</data>
-      <data key="d1">116</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="96">
-      <data key="d0">18</data>
-      <data key="d1">181</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="97">
-      <data key="d0">17</data>
-      <data key="d1">182</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="98">
-      <data key="d0">18</data>
-      <data key="d1">182</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="99">
-      <data key="d0">20</data>
-      <data key="d1">230</data>
-      <data key="d2">branch</data>
-      <data key="d3">4</data>
-    </node>
-    <node id="100">
-      <data key="d0">19</data>
-      <data key="d1">231</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="101">
-      <data key="d0">20</data>
-      <data key="d1">231</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="102">
-      <data key="d0">21</data>
-      <data key="d1">231</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="103">
-      <data key="d0">105</data>
-      <data key="d1">262</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="104">
-      <data key="d0">106</data>
-      <data key="d1">262</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="105">
-      <data key="d0">105</data>
-      <data key="d1">263</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="106">
-      <data key="d0">0</data>
-      <data key="d1">278</data>
-      <data key="d2">branch</data>
-      <data key="d3">1</data>
-    </node>
-    <node id="107">
-      <data key="d0">0</data>
-      <data key="d1">279</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="108">
-      <data key="d0">0</data>
-      <data key="d1">280</data>
-      <data key="d2">branch</data>
-      <data key="d3">2</data>
-    </node>
-    <node id="109">
-      <data key="d0">242</data>
-      <data key="d1">287</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="110">
-      <data key="d0">242</data>
-      <data key="d1">288</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <node id="111">
-      <data key="d0">243</data>
-      <data key="d1">288</data>
-      <data key="d2">branch</data>
-      <data key="d3">4</data>
-    </node>
-    <node id="112">
-      <data key="d0">242</data>
-      <data key="d1">289</data>
-      <data key="d2">branch</data>
-      <data key="d3">3</data>
-    </node>
-    <edge source="0" target="56">
-      <data key="d4">2</data>
-      <data key="d5">[[124, 1], [125, 0]]</data>
-    </edge>
-    <edge source="1" target="62">
-      <data key="d4">3</data>
-      <data key="d5">[[265, 1], [264, 1], [263, 0]]</data>
-    </edge>
-    <edge source="2" target="63">
-      <data key="d4">4</data>
-      <data key="d5">[[276, 1], [277, 1], [278, 1], [279, 0]]</data>
-    </edge>
-    <edge source="3" target="74">
-      <data key="d4">26</data>
-      <data key="d5">[[93, 2], [94, 3], [94, 4], [95, 5], [96, 6], [97, 7], [97, 8], [97, 9], [98, 10], [98, 11], [99, 12], [99, 13], [99, 14], [100, 15], [101, 16], [101, 17], [102, 18], [102, 19], [102, 20], [103, 21], [104, 22], [105, 23], [106, 24], [107, 25], [108, 26], [108, 27]]</data>
-    </edge>
-    <edge source="4" target="6">
-      <data key="d4">7</data>
-      <data key="d5">[[196, 7], [196, 8], [196, 9], [197, 10], [198, 11], [199, 12], [200, 13]]</data>
-    </edge>
-    <edge source="5" target="11">
-      <data key="d4">24</data>
-      <data key="d5">[[295, 10], [295, 11], [296, 12], [296, 13], [296, 14], [296, 15], [296, 16], [296, 17], [296, 18], [296, 19], [296, 20], [296, 21], [296, 22], [297, 23], [297, 24], [297, 25], [298, 26], [298, 27], [299, 28], [299, 29], [299, 30], [299, 31], [299, 32], [299, 33]]</data>
-    </edge>
-    <edge source="7" target="69">
-      <data key="d4">15</data>
-      <data key="d5">[[281, 13], [281, 12], [282, 11], [283, 10], [284, 9], [285, 9], [286, 8], [287, 7], [288, 6], [288, 5], [288, 4], [288, 3], [287, 2], [286, 1], [285, 0]]</data>
-    </edge>
-    <edge source="8" target="73">
-      <data key="d4">2</data>
-      <data key="d5">[[1, 24], [0, 23]]</data>
-    </edge>
-    <edge source="9" target="60">
-      <data key="d4">30</data>
-      <data key="d5">[[257, 28], [258, 27], [257, 26], [256, 25], [256, 24], [256, 23], [256, 22], [256, 21], [256, 20], [256, 19], [256, 18], [256, 17], [256, 16], [256, 15], [256, 14], [256, 13], [256, 12], [256, 11], [256, 10], [256, 9], [257, 8], [257, 7], [257, 6], [257, 5], [257, 4], [257, 3], [258, 2], [259, 1], [260, 1], [261, 0]]</data>
-    </edge>
-    <edge source="10" target="76">
-      <data key="d4">9</data>
-      <data key="d5">[[117, 30], [116, 30], [115, 30], [114, 29], [113, 29], [112, 29], [111, 29], [110, 28], [109, 28]]</data>
-    </edge>
-    <edge source="12" target="77">
-      <data key="d4">9</data>
-      <data key="d5">[[110, 36], [109, 36], [108, 35], [107, 34], [107, 33], [107, 32], [107, 31], [108, 30], [108, 29]]</data>
-    </edge>
-    <edge source="13" target="70">
-      <data key="d4">87</data>
-      <data key="d5">[[77, 38], [76, 37], [75, 36], [74, 36], [73, 35], [72, 35], [71, 34], [70, 33], [69, 32], [68, 31], [67, 31], [66, 30], [65, 29], [64, 28], [63, 27], [62, 27], [61, 26], [60, 26], [59, 27], [58, 27], [57, 27], [56, 27], [55, 27], [54, 27], [53, 26], [52, 25], [51, 24], [50, 23], [49, 22], [48, 21], [47, 20], [46, 19], [45, 18], [44, 17], [43, 16], [42, 15], [41, 15], [40, 14], [39, 14], [38, 13], [37, 13], [36, 13], [35, 12], [34, 11], [33, 11], [32, 10], [31, 10], [30, 9], [29, 9], [28, 9], [27, 8], [26, 7], [25, 7], [24, 6], [23, 6], [22, 6], [21, 5], [20, 4], [19, 3], [18, 3], [17, 2], [16, 2], [15, 1], [14, 1], [13, 1], [12, 1], [11, 1], [10, 2], [9, 2], [8, 3], [8, 4], [7, 5], [7, 6], [7, 7], [7, 8], [7, 9], [6, 10], [6, 11], [6, 12], [5, 13], [5, 14], [4, 15], [3, 16], [2, 17], [1, 18], [1, 19], [0, 20]]</data>
-    </edge>
-    <edge source="14" target="80">
-      <data key="d4">24</data>
-      <data key="d5">[[174, 46], [173, 45], [172, 44], [171, 43], [170, 43], [169, 42], [168, 42], [167, 41], [166, 41], [165, 40], [164, 39], [163, 39], [162, 38], [161, 38], [160, 37], [159, 36], [158, 35], [157, 34], [156, 33], [155, 33], [154, 33], [153, 33], [152, 33], [151, 33]]</data>
-    </edge>
-    <edge source="15" target="85">
-      <data key="d4">11</data>
-      <data key="d5">[[145, 60], [144, 59], [143, 58], [143, 57], [143, 56], [143, 55], [143, 54], [143, 53], [143, 52], [143, 51], [142, 50]]</data>
-    </edge>
-    <edge source="16" target="25">
-      <data key="d4">118</data>
-      <data key="d5">[[1, 62], [2, 61], [3, 61], [4, 61], [5, 61], [6, 61], [7, 61], [8, 61], [9, 61], [10, 61], [11, 61], [12, 61], [13, 61], [14, 61], [15, 61], [16, 61], [17, 60], [18, 60], [19, 60], [20, 60], [21, 60], [22, 60], [23, 59], [24, 59], [25, 59], [26, 59], [27, 59], [28, 59], [29, 59], [30, 59], [31, 59], [32, 58], [33, 58], [34, 58], [35, 59], [36, 59], [37, 59], [38, 59], [39, 59], [40, 59], [41, 59], [42, 59], [43, 59], [44, 60], [45, 60], [46, 60], [47, 61], [48, 61], [49, 61], [50, 62], [51, 62], [52, 63], [53, 63], [54, 64], [55, 65], [56, 65], [57, 66], [58, 67], [59, 68], [60, 68], [61, 69], [62, 70], [63, 70], [64, 71], [65, 72], [66, 73], [67, 74], [68, 74], [69, 75], [70, 76], [71, 77], [72, 78], [73, 79], [74, 80], [75, 81], [75, 82], [76, 83], [76, 84], [77, 85], [77, 86], [78, 87], [79, 88], [80, 89], [81, 90], [81, 91], [82, 92], [83, 93], [84, 94], [85, 95], [86, 95], [87, 96], [88, 97], [89, 98], [90, 99], [91, 100], [92, 101], [93, 102], [94, 103], [94, 104], [93, 105], [93, 106], [93, 107], [93, 108], [93, 109], [93, 110], [93, 111], [92, 112], [92, 113], [92, 114], [92, 115], [92, 116], [92, 117], [92, 118], [92, 119], [92, 120], [92, 121], [92, 122], [92, 123]]</data>
-    </edge>
-    <edge source="17" target="82">
-      <data key="d4">36</data>
-      <data key="d5">[[108, 74], [109, 73], [109, 72], [110, 71], [111, 70], [112, 70], [113, 69], [114, 68], [115, 67], [116, 66], [116, 65], [117, 64], [118, 63], [119, 62], [120, 61], [121, 60], [122, 59], [123, 59], [124, 58], [125, 57], [126, 57], [127, 56], [128, 56], [129, 55], [130, 54], [131, 54], [132, 53], [133, 52], [134, 51], [135, 51], [136, 50], [137, 50], [138, 50], [139, 49], [140, 49], [141, 49]]</data>
-    </edge>
-    <edge source="18" target="23">
-      <data key="d4">33</data>
-      <data key="d5">[[273, 75], [274, 76], [275, 77], [275, 78], [276, 79], [276, 80], [277, 81], [277, 82], [278, 83], [278, 84], [279, 85], [279, 86], [279, 87], [279, 88], [279, 89], [279, 90], [280, 91], [281, 92], [282, 93], [282, 94], [283, 95], [284, 96], [285, 97], [286, 98], [286, 99], [287, 100], [287, 101], [287, 102], [288, 103], [289, 104], [290, 105], [291, 106], [292, 107]]</data>
-    </edge>
-    <edge source="19" target="81">
-      <data key="d4">44</data>
-      <data key="d5">[[183, 88], [182, 87], [182, 86], [181, 85], [180, 84], [179, 83], [178, 82], [178, 81], [177, 80], [177, 79], [176, 78], [175, 77], [174, 76], [173, 75], [172, 74], [171, 73], [170, 72], [169, 71], [168, 70], [167, 69], [167, 68], [166, 67], [166, 66], [165, 65], [164, 64], [164, 63], [163, 62], [162, 61], [162, 60], [161, 59], [160, 58], [160, 57], [159, 56], [158, 55], [157, 54], [156, 53], [155, 52], [154, 51], [153, 50], [152, 49], [151, 49], [150, 48], [149, 47], [148, 46]]</data>
-    </edge>
-    <edge source="20" target="86">
-      <data key="d4">2</data>
-      <data key="d5">[[1, 89], [0, 90]]</data>
-    </edge>
-    <edge source="21" target="22">
-      <data key="d4">16</data>
-      <data key="d5">[[104, 103], [105, 103], [106, 103], [107, 104], [108, 104], [109, 105], [110, 105], [111, 105], [112, 105], [113, 105], [114, 105], [115, 106], [116, 107], [117, 107], [118, 107], [119, 107]]</data>
-    </edge>
-    <edge source="24" target="88">
-      <data key="d4">61</data>
-      <data key="d5">[[60, 109], [59, 108], [58, 107], [57, 106], [56, 106], [55, 105], [54, 104], [53, 104], [52, 103], [51, 103], [50, 102], [49, 102], [48, 102], [47, 101], [46, 101], [45, 102], [44, 102], [43, 102], [42, 102], [41, 102], [40, 102], [39, 102], [38, 102], [37, 102], [36, 102], [35, 101], [34, 101], [33, 100], [32, 100], [31, 99], [30, 99], [29, 98], [28, 98], [27, 97], [26, 97], [25, 97], [24, 97], [23, 97], [22, 96], [21, 96], [20, 96], [19, 96], [18, 96], [17, 96], [16, 96], [15, 96], [14, 96], [13, 96], [12, 96], [11, 96], [10, 96], [9, 96], [8, 96], [7, 96], [6, 96], [5, 96], [4, 95], [3, 95], [2, 94], [1, 93], [0, 92]]</data>
-    </edge>
-    <edge source="26" target="92">
-      <data key="d4">21</data>
-      <data key="d5">[[223, 130], [224, 130], [225, 130], [226, 129], [227, 129], [228, 128], [229, 127], [230, 126], [231, 125], [231, 124], [232, 123], [233, 122], [233, 121], [233, 120], [234, 119], [234, 118], [235, 117], [235, 116], [235, 115], [236, 114], [237, 113]]</data>
-    </edge>
-    <edge source="27" target="95">
-      <data key="d4">56</data>
-      <data key="d5">[[53, 143], [52, 144], [51, 144], [50, 145], [49, 146], [48, 147], [47, 148], [46, 148], [45, 148], [44, 148], [43, 148], [42, 148], [41, 147], [40, 147], [39, 147], [38, 147], [37, 147], [36, 146], [35, 146], [34, 146], [33, 145], [32, 145], [31, 144], [30, 144], [29, 143], [28, 143], [27, 142], [26, 142], [25, 141], [24, 141], [23, 140], [22, 139], [21, 138], [20, 137], [19, 136], [18, 135], [17, 134], [16, 134], [15, 133], [14, 132], [13, 131], [12, 130], [11, 129], [11, 128], [10, 127], [9, 126], [8, 125], [7, 124], [6, 123], [5, 122], [4, 121], [3, 120], [2, 119], [1, 118], [1, 117], [0, 116]]</data>
-    </edge>
-    <edge source="28" target="39">
-      <data key="d4">47</data>
-      <data key="d5">[[82, 168], [82, 169], [83, 170], [83, 171], [84, 172], [84, 173], [85, 174], [86, 175], [87, 176], [88, 177], [89, 178], [90, 179], [91, 180], [92, 181], [92, 182], [93, 183], [93, 184], [93, 185], [94, 186], [94, 187], [94, 188], [94, 189], [95, 190], [96, 191], [96, 192], [97, 193], [97, 194], [98, 195], [98, 196], [99, 197], [99, 198], [100, 199], [100, 200], [101, 201], [102, 202], [102, 203], [102, 204], [103, 205], [103, 206], [104, 207], [104, 208], [105, 209], [105, 210], [106, 211], [106, 212], [106, 213], [107, 214]]</data>
-    </edge>
-    <edge source="29" target="96">
-      <data key="d4">8</data>
-      <data key="d5">[[25, 177], [24, 178], [23, 178], [22, 178], [21, 179], [20, 179], [19, 180], [18, 181]]</data>
-    </edge>
-    <edge source="30" target="31">
-      <data key="d4">14</data>
-      <data key="d5">[[53, 177], [52, 177], [51, 177], [50, 177], [49, 178], [48, 178], [47, 179], [46, 178], [45, 178], [44, 178], [43, 179], [42, 179], [41, 179], [40, 179]]</data>
-    </edge>
-    <edge source="32" target="91">
-      <data key="d4">69</data>
-      <data key="d5">[[279, 179], [278, 178], [278, 177], [277, 176], [277, 175], [277, 174], [276, 173], [276, 172], [275, 171], [275, 170], [274, 169], [273, 168], [273, 167], [272, 166], [271, 165], [271, 164], [271, 163], [270, 162], [269, 161], [269, 160], [268, 159], [267, 158], [266, 157], [265, 156], [265, 155], [264, 154], [264, 153], [263, 152], [263, 151], [262, 150], [262, 149], [261, 148], [261, 147], [261, 146], [260, 145], [260, 144], [259, 143], [258, 142], [258, 141], [257, 140], [256, 139], [255, 138], [255, 137], [254, 136], [254, 135], [254, 134], [254, 133], [253, 132], [252, 131], [252, 130], [251, 129], [250, 128], [250, 127], [249, 126], [249, 125], [248, 124], [248, 123], [247, 122], [246, 121], [246, 120], [245, 119], [244, 118], [244, 117], [243, 116], [242, 115], [241, 114], [240, 113], [239, 112], [238, 112]]</data>
-    </edge>
-    <edge source="33" target="98">
-      <data key="d4">17</data>
-      <data key="d5">[[34, 181], [33, 181], [32, 182], [31, 182], [30, 183], [29, 183], [28, 183], [27, 183], [26, 183], [25, 184], [24, 184], [23, 184], [22, 184], [21, 184], [20, 183], [19, 183], [18, 182]]</data>
-    </edge>
-    <edge source="34" target="104">
-      <data key="d4">87</data>
-      <data key="d5">[[114, 181], [115, 182], [116, 183], [117, 184], [118, 185], [119, 185], [120, 185], [121, 186], [122, 187], [123, 188], [123, 189], [123, 190], [123, 191], [123, 192], [123, 193], [122, 194], [122, 195], [122, 196], [121, 197], [120, 198], [120, 199], [120, 200], [119, 201], [119, 202], [119, 203], [119, 204], [118, 205], [118, 206], [117, 207], [117, 208], [116, 209], [115, 210], [115, 211], [115, 212], [114, 213], [114, 214], [113, 215], [113, 216], [113, 217], [113, 218], [112, 219], [112, 220], [112, 221], [112, 222], [112, 223], [112, 224], [112, 225], [112, 226], [112, 227], [112, 228], [113, 229], [113, 230], [113, 231], [114, 232], [114, 233], [114, 234], [115, 235], [115, 236], [115, 237], [115, 238], [115, 239], [115, 240], [116, 241], [116, 242], [116, 243], [116, 244], [115, 245], [115, 246], [115, 247], [115, 248], [115, 249], [115, 250], [114, 251], [114, 252], [114, 253], [114, 254], [114, 255], [113, 256], [113, 257], [113, 258], [112, 259], [111, 260], [110, 261], [109, 261], [108, 261], [107, 261], [106, 262]]</data>
-    </edge>
-    <edge source="35" target="97">
-      <data key="d4">16</data>
-      <data key="d5">[[2, 185], [3, 185], [4, 184], [5, 184], [6, 184], [7, 184], [8, 184], [9, 184], [10, 184], [11, 184], [12, 184], [13, 183], [14, 183], [15, 183], [16, 182], [17, 182]]</data>
-    </edge>
-    <edge source="36" target="111">
-      <data key="d4">101</data>
-      <data key="d5">[[242, 199], [242, 200], [243, 201], [244, 202], [245, 203], [246, 204], [247, 205], [248, 206], [249, 207], [250, 208], [251, 209], [252, 210], [253, 211], [254, 212], [255, 213], [256, 214], [257, 215], [258, 215], [259, 216], [260, 216], [261, 217], [262, 218], [263, 219], [264, 220], [265, 221], [265, 222], [265, 223], [265, 224], [265, 225], [265, 226], [265, 227], [265, 228], [265, 229], [265, 230], [265, 231], [265, 232], [266, 233], [266, 234], [267, 235], [267, 236], [267, 237], [268, 238], [268, 239], [269, 240], [269, 241], [269, 242], [270, 243], [270, 244], [271, 245], [271, 246], [272, 247], [272, 248], [272, 249], [272, 250], [272, 251], [271, 252], [270, 253], [270, 254], [269, 255], [268, 256], [268, 257], [268, 258], [268, 259], [268, 260], [268, 261], [268, 262], [268, 263], [267, 264], [267, 265], [267, 266], [266, 267], [266, 268], [266, 269], [265, 270], [265, 271], [264, 272], [264, 273], [264, 274], [263, 275], [263, 276], [263, 277], [262, 278], [261, 279], [260, 280], [259, 281], [258, 282], [257, 283], [256, 283], [255, 284], [254, 284], [253, 284], [252, 284], [251, 285], [250, 285], [249, 286], [248, 286], [247, 287], [246, 287], [245, 287], [244, 288], [243, 288]]</data>
-    </edge>
-    <edge source="37" target="99">
-      <data key="d4">49</data>
-      <data key="d5">[[66, 205], [65, 205], [64, 205], [63, 205], [62, 205], [61, 204], [60, 204], [59, 203], [58, 203], [57, 203], [56, 203], [55, 203], [54, 204], [53, 204], [52, 205], [51, 205], [50, 206], [49, 206], [48, 206], [47, 207], [46, 208], [45, 208], [44, 209], [43, 210], [42, 211], [41, 212], [40, 213], [39, 214], [39, 215], [38, 216], [37, 217], [36, 218], [35, 218], [34, 219], [33, 220], [32, 221], [31, 221], [30, 222], [29, 222], [28, 223], [27, 224], [26, 224], [25, 225], [24, 225], [23, 226], [22, 227], [21, 228], [20, 229], [20, 230]]</data>
-    </edge>
-    <edge source="38" target="41">
-      <data key="d4">158</data>
-      <data key="d5">[[191, 209], [191, 210], [190, 211], [190, 212], [189, 213], [189, 214], [188, 215], [188, 216], [187, 217], [187, 218], [187, 219], [187, 220], [187, 221], [186, 222], [185, 223], [185, 224], [184, 225], [184, 226], [183, 227], [182, 228], [182, 229], [181, 230], [181, 231], [180, 232], [180, 233], [179, 234], [179, 235], [178, 236], [178, 237], [178, 238], [178, 239], [178, 240], [178, 241], [178, 242], [178, 243], [178, 244], [178, 245], [178, 246], [178, 247], [178, 248], [178, 249], [178, 250], [178, 251], [178, 252], [178, 253], [178, 254], [178, 255], [177, 256], [177, 257], [177, 258], [176, 259], [176, 260], [175, 261], [175, 262], [174, 263], [173, 264], [172, 265], [171, 266], [170, 267], [169, 268], [168, 269], [167, 270], [166, 271], [165, 272], [164, 273], [163, 274], [162, 275], [161, 276], [161, 277], [160, 278], [160, 279], [159, 280], [158, 281], [157, 282], [156, 283], [156, 284], [155, 285], [154, 286], [154, 287], [153, 288], [153, 289], [153, 290], [153, 291], [153, 292], [153, 293], [152, 294], [151, 295], [150, 296], [149, 295], [148, 294], [147, 293], [147, 292], [147, 291], [146, 290], [146, 289], [146, 288], [146, 287], [145, 286], [144, 285], [144, 284], [144, 283], [143, 282], [143, 281], [143, 280], [143, 279], [143, 278], [143, 277], [143, 276], [143, 275], [143, 274], [143, 273], [143, 272], [143, 271], [143, 270], [144, 269], [144, 268], [144, 267], [144, 266], [144, 265], [144, 264], [144, 263], [144, 262], [144, 261], [144, 260], [144, 259], [144, 258], [143, 257], [143, 256], [144, 255], [144, 254], [144, 253], [144, 252], [144, 251], [145, 250], [145, 249], [145, 248], [145, 247], [145, 246], [144, 245], [145, 244], [145, 243], [145, 242], [145, 241], [145, 240], [146, 239], [146, 238], [147, 237], [147, 236], [148, 235], [148, 234], [148, 233], [148, 232], [148, 231], [148, 230], [148, 229], [147, 228], [146, 227], [146, 226]]</data>
-    </edge>
-    <edge source="40" target="54">
-      <data key="d4">80</data>
-      <data key="d5">[[209, 224], [210, 224], [211, 225], [212, 226], [213, 227], [213, 228], [214, 229], [214, 230], [214, 231], [214, 232], [214, 233], [214, 234], [214, 235], [215, 236], [215, 237], [215, 238], [216, 239], [216, 240], [217, 241], [218, 242], [218, 243], [218, 244], [218, 245], [219, 246], [219, 247], [219, 248], [219, 249], [219, 250], [219, 251], [219, 252], [219, 253], [218, 254], [218, 255], [218, 256], [217, 257], [217, 258], [217, 259], [216, 260], [216, 261], [216, 262], [215, 263], [215, 264], [214, 265], [214, 266], [213, 267], [212, 268], [212, 269], [211, 270], [211, 271], [211, 272], [210, 273], [210, 274], [209, 275], [209, 276], [208, 277], [207, 278], [207, 279], [206, 280], [206, 281], [205, 282], [205, 283], [204, 284], [204, 285], [203, 286], [203, 287], [202, 288], [202, 289], [201, 290], [201, 291], [200, 292], [200, 293], [199, 294], [198, 295], [198, 296], [197, 297], [197, 298], [197, 299], [196, 300], [196, 301], [195, 302]]</data>
-    </edge>
-    <edge source="42" target="103">
-      <data key="d4">33</data>
-      <data key="d5">[[74, 233], [75, 233], [76, 233], [77, 234], [78, 235], [79, 236], [80, 237], [81, 238], [82, 239], [83, 239], [84, 240], [85, 241], [86, 242], [87, 243], [88, 244], [89, 245], [90, 246], [91, 247], [92, 248], [93, 249], [94, 250], [95, 251], [96, 252], [97, 253], [98, 254], [99, 255], [100, 256], [101, 257], [101, 258], [102, 259], [103, 260], [104, 261], [105, 262]]</data>
-    </edge>
-    <edge source="43" target="100">
-      <data key="d4">19</data>
-      <data key="d5">[[1, 234], [2, 233], [3, 233], [4, 233], [5, 233], [6, 232], [7, 232], [8, 232], [9, 232], [10, 232], [11, 232], [12, 231], [13, 231], [14, 231], [15, 231], [16, 231], [17, 231], [18, 231], [19, 231]]</data>
-    </edge>
-    <edge source="44" target="102">
-      <data key="d4">32</data>
-      <data key="d5">[[52, 249], [51, 248], [50, 247], [49, 246], [48, 245], [47, 244], [46, 243], [45, 242], [44, 241], [43, 241], [42, 241], [41, 240], [40, 239], [39, 239], [38, 238], [37, 238], [36, 237], [35, 237], [34, 237], [33, 236], [32, 236], [31, 235], [30, 235], [29, 235], [28, 234], [27, 234], [26, 233], [25, 233], [24, 233], [23, 233], [22, 232], [21, 231]]</data>
-    </edge>
-    <edge source="45" target="48">
-      <data key="d4">23</data>
-      <data key="d5">[[58, 256], [58, 257], [59, 258], [60, 259], [60, 260], [61, 261], [61, 262], [61, 263], [61, 264], [62, 265], [62, 266], [62, 267], [63, 268], [63, 269], [63, 270], [63, 271], [64, 272], [64, 273], [65, 274], [65, 275], [66, 276], [66, 277], [66, 278]]</data>
-    </edge>
-    <edge source="46" target="55">
-      <data key="d4">52</data>
-      <data key="d5">[[296, 260], [296, 261], [296, 262], [296, 263], [296, 264], [296, 265], [297, 266], [297, 267], [297, 268], [296, 269], [296, 270], [296, 271], [295, 272], [295, 273], [294, 274], [293, 275], [292, 276], [291, 277], [291, 278], [290, 279], [289, 280], [288, 281], [287, 282], [286, 283], [285, 283], [284, 284], [283, 284], [282, 285], [281, 286], [280, 287], [279, 288], [278, 289], [277, 289], [276, 290], [275, 291], [274, 292], [273, 293], [272, 293], [271, 294], [270, 295], [269, 295], [268, 296], [267, 296], [266, 297], [265, 298], [264, 299], [263, 299], [262, 300], [261, 301], [260, 302], [259, 302], [258, 302]]</data>
-    </edge>
-    <edge source="47" target="52">
-      <data key="d4">33</data>
-      <data key="d5">[[42, 272], [43, 273], [43, 274], [44, 275], [44, 276], [45, 277], [45, 278], [46, 279], [46, 280], [47, 281], [47, 282], [47, 283], [47, 284], [48, 285], [49, 286], [50, 287], [51, 288], [52, 289], [52, 290], [53, 291], [53, 292], [54, 293], [54, 294], [55, 295], [56, 296], [57, 297], [57, 298], [58, 299], [59, 300], [60, 301], [61, 302], [62, 302], [63, 302]]</data>
-    </edge>
-    <edge source="49" target="109">
-      <data key="d4">9</data>
-      <data key="d5">[[239, 279], [239, 280], [240, 281], [240, 282], [240, 283], [240, 284], [240, 285], [241, 286], [242, 287]]</data>
-    </edge>
-    <edge source="50" target="112">
-      <data key="d4">15</data>
-      <data key="d5">[[229, 301], [230, 301], [231, 300], [232, 299], [233, 298], [234, 297], [235, 296], [236, 295], [237, 294], [238, 294], [239, 293], [240, 292], [241, 291], [241, 290], [242, 289]]</data>
-    </edge>
-    <edge source="51" target="108">
-      <data key="d4">23</data>
-      <data key="d5">[[15, 302], [14, 301], [13, 300], [12, 299], [12, 298], [12, 297], [12, 296], [12, 295], [12, 294], [11, 293], [10, 292], [9, 291], [9, 290], [8, 289], [7, 288], [7, 287], [6, 286], [5, 285], [4, 284], [3, 283], [2, 282], [1, 281], [0, 280]]</data>
-    </edge>
-    <edge source="53" target="105">
-      <data key="d4">40</data>
-      <data key="d5">[[88, 302], [89, 301], [89, 300], [89, 299], [89, 298], [89, 297], [90, 296], [90, 295], [90, 294], [90, 293], [90, 292], [90, 291], [90, 290], [90, 289], [91, 288], [92, 287], [92, 286], [93, 285], [93, 284], [94, 283], [94, 282], [94, 281], [94, 280], [95, 279], [96, 278], [97, 277], [98, 276], [99, 275], [100, 274], [101, 273], [102, 272], [103, 271], [104, 270], [104, 269], [104, 268], [104, 267], [104, 266], [104, 265], [105, 264], [105, 263]]</data>
-    </edge>
-    <edge source="56" target="78">
-      <data key="d4">38</data>
-      <data key="d5">[[125, 0], [126, 1], [127, 1], [128, 2], [129, 3], [130, 4], [131, 5], [132, 6], [133, 7], [134, 8], [134, 9], [135, 10], [135, 11], [136, 12], [137, 13], [138, 14], [139, 14], [140, 14], [141, 14], [142, 15], [143, 16], [144, 16], [145, 17], [146, 18], [147, 19], [148, 20], [148, 21], [148, 22], [148, 23], [149, 24], [149, 25], [149, 26], [149, 27], [149, 28], [149, 29], [150, 30], [150, 31], [150, 32]]</data>
-    </edge>
-    <edge source="57" target="58">
-      <data key="d4">2</data>
-      <data key="d5">[[169, 0], [170, 0]]</data>
-    </edge>
-    <edge source="58" target="59">
-      <data key="d4">2</data>
-      <data key="d5">[[170, 0], [171, 0]]</data>
-    </edge>
-    <edge source="59" target="89">
-      <data key="d4">114</data>
-      <data key="d5">[[171, 0], [172, 1], [173, 1], [174, 2], [175, 3], [176, 3], [177, 4], [178, 5], [179, 6], [180, 7], [181, 8], [182, 9], [183, 10], [184, 11], [185, 12], [186, 13], [187, 14], [188, 15], [189, 16], [190, 17], [191, 18], [192, 19], [193, 20], [194, 21], [194, 22], [195, 23], [196, 24], [196, 25], [197, 26], [198, 27], [198, 28], [199, 29], [200, 30], [200, 31], [201, 32], [202, 33], [202, 34], [203, 35], [204, 36], [205, 37], [206, 38], [207, 39], [208, 40], [208, 41], [209, 42], [210, 43], [210, 44], [210, 45], [211, 46], [212, 47], [213, 48], [213, 49], [214, 50], [215, 51], [216, 52], [216, 53], [217, 54], [217, 55], [218, 56], [219, 57], [219, 58], [220, 59], [221, 60], [221, 61], [222, 62], [222, 63], [222, 64], [223, 65], [223, 66], [224, 67], [224, 68], [225, 69], [225, 70], [225, 71], [226, 72], [226, 73], [226, 74], [227, 75], [227, 76], [228, 77], [228, 78], [228, 79], [229, 80], [229, 81], [230, 82], [231, 83], [231, 84], [231, 85], [231, 86], [232, 87], [232, 88], [232, 89], [232, 90], [232, 91], [233, 92], [233, 93], [233, 94], [234, 95], [234, 96], [234, 97], [234, 98], [235, 99], [235, 100], [235, 101], [235, 102], [235, 103], [236, 104], [236, 105], [236, 106], [237, 107], [237, 108], [237, 109], [237, 110], [237, 111]]</data>
-    </edge>
-    <edge source="60" target="61">
-      <data key="d4">2</data>
-      <data key="d5">[[261, 0], [262, 0]]</data>
-    </edge>
-    <edge source="61" target="62">
-      <data key="d4">2</data>
-      <data key="d5">[[262, 0], [263, 0]]</data>
-    </edge>
-    <edge source="63" target="64">
-      <data key="d4">2</data>
-      <data key="d5">[[279, 0], [280, 0]]</data>
-    </edge>
-    <edge source="64" target="65">
-      <data key="d4">2</data>
-      <data key="d5">[[280, 0], [281, 0]]</data>
-    </edge>
-    <edge source="65" target="66">
-      <data key="d4">2</data>
-      <data key="d5">[[281, 0], [282, 0]]</data>
-    </edge>
-    <edge source="66" target="67">
-      <data key="d4">2</data>
-      <data key="d5">[[282, 0], [283, 0]]</data>
-    </edge>
-    <edge source="67" target="68">
-      <data key="d4">2</data>
-      <data key="d5">[[283, 0], [284, 0]]</data>
-    </edge>
-    <edge source="68" target="69">
-      <data key="d4">2</data>
-      <data key="d5">[[284, 0], [285, 0]]</data>
-    </edge>
-    <edge source="70" target="71">
-      <data key="d4">2</data>
-      <data key="d5">[[0, 20], [0, 21]]</data>
-    </edge>
-    <edge source="71" target="72">
-      <data key="d4">2</data>
-      <data key="d5">[[0, 21], [0, 22]]</data>
-    </edge>
-    <edge source="72" target="73">
-      <data key="d4">2</data>
-      <data key="d5">[[0, 22], [0, 23]]</data>
-    </edge>
-    <edge source="74" target="75">
-      <data key="d4">2</data>
-      <data key="d5">[[108, 27], [108, 28]]</data>
-    </edge>
-    <edge source="74" target="76">
-      <data key="d4">2</data>
-      <data key="d5">[[108, 27], [109, 28]]</data>
-    </edge>
-    <edge source="75" target="76">
-      <data key="d4">2</data>
-      <data key="d5">[[108, 28], [109, 28]]</data>
-    </edge>
-    <edge source="75" target="77">
-      <data key="d4">2</data>
-      <data key="d5">[[108, 28], [108, 29]]</data>
-    </edge>
-    <edge source="76" target="77">
-      <data key="d4">2</data>
-      <data key="d5">[[109, 28], [108, 29]]</data>
-    </edge>
-    <edge source="78" target="79">
-      <data key="d4">2</data>
-      <data key="d5">[[150, 32], [150, 33]]</data>
-    </edge>
-    <edge source="78" target="80">
-      <data key="d4">2</data>
-      <data key="d5">[[150, 32], [151, 33]]</data>
-    </edge>
-    <edge source="79" target="80">
-      <data key="d4">2</data>
-      <data key="d5">[[150, 33], [151, 33]]</data>
-    </edge>
-    <edge source="79" target="81">
-      <data key="d4">14</data>
-      <data key="d5">[[150, 33], [149, 34], [149, 35], [149, 36], [149, 37], [149, 38], [148, 39], [148, 40], [148, 41], [148, 42], [148, 43], [148, 44], [148, 45], [148, 46]]</data>
-    </edge>
-    <edge source="81" target="84">
-      <data key="d4">6</data>
-      <data key="d5">[[148, 46], [147, 47], [146, 47], [145, 48], [144, 49], [143, 49]]</data>
-    </edge>
-    <edge source="82" target="83">
-      <data key="d4">2</data>
-      <data key="d5">[[141, 49], [142, 49]]</data>
-    </edge>
-    <edge source="82" target="85">
-      <data key="d4">2</data>
-      <data key="d5">[[141, 49], [142, 50]]</data>
-    </edge>
-    <edge source="83" target="84">
-      <data key="d4">2</data>
-      <data key="d5">[[142, 49], [143, 49]]</data>
-    </edge>
-    <edge source="83" target="85">
-      <data key="d4">2</data>
-      <data key="d5">[[142, 49], [142, 50]]</data>
-    </edge>
-    <edge source="84" target="85">
-      <data key="d4">2</data>
-      <data key="d5">[[143, 49], [142, 50]]</data>
-    </edge>
-    <edge source="86" target="87">
-      <data key="d4">2</data>
-      <data key="d5">[[0, 90], [0, 91]]</data>
-    </edge>
-    <edge source="87" target="88">
-      <data key="d4">2</data>
-      <data key="d5">[[0, 91], [0, 92]]</data>
-    </edge>
-    <edge source="89" target="90">
-      <data key="d4">2</data>
-      <data key="d5">[[237, 111], [237, 112]]</data>
-    </edge>
-    <edge source="89" target="91">
-      <data key="d4">2</data>
-      <data key="d5">[[237, 111], [238, 112]]</data>
-    </edge>
-    <edge source="90" target="91">
-      <data key="d4">2</data>
-      <data key="d5">[[237, 112], [238, 112]]</data>
-    </edge>
-    <edge source="90" target="92">
-      <data key="d4">2</data>
-      <data key="d5">[[237, 112], [237, 113]]</data>
-    </edge>
-    <edge source="91" target="92">
-      <data key="d4">2</data>
-      <data key="d5">[[238, 112], [237, 113]]</data>
-    </edge>
-    <edge source="93" target="94">
-      <data key="d4">2</data>
-      <data key="d5">[[0, 114], [0, 115]]</data>
-    </edge>
-    <edge source="94" target="95">
-      <data key="d4">2</data>
-      <data key="d5">[[0, 115], [0, 116]]</data>
-    </edge>
-    <edge source="96" target="97">
-      <data key="d4">2</data>
-      <data key="d5">[[18, 181], [17, 182]]</data>
-    </edge>
-    <edge source="96" target="98">
-      <data key="d4">2</data>
-      <data key="d5">[[18, 181], [18, 182]]</data>
-    </edge>
-    <edge source="97" target="98">
-      <data key="d4">2</data>
-      <data key="d5">[[17, 182], [18, 182]]</data>
-    </edge>
-    <edge source="99" target="100">
-      <data key="d4">2</data>
-      <data key="d5">[[20, 230], [19, 231]]</data>
-    </edge>
-    <edge source="99" target="101">
-      <data key="d4">2</data>
-      <data key="d5">[[20, 230], [20, 231]]</data>
-    </edge>
-    <edge source="99" target="102">
-      <data key="d4">2</data>
-      <data key="d5">[[20, 230], [21, 231]]</data>
-    </edge>
-    <edge source="100" target="101">
-      <data key="d4">2</data>
-      <data key="d5">[[19, 231], [20, 231]]</data>
-    </edge>
-    <edge source="101" target="102">
-      <data key="d4">2</data>
-      <data key="d5">[[20, 231], [21, 231]]</data>
-    </edge>
-    <edge source="103" target="104">
-      <data key="d4">2</data>
-      <data key="d5">[[105, 262], [106, 262]]</data>
-    </edge>
-    <edge source="103" target="105">
-      <data key="d4">2</data>
-      <data key="d5">[[105, 262], [105, 263]]</data>
-    </edge>
-    <edge source="104" target="105">
-      <data key="d4">2</data>
-      <data key="d5">[[106, 262], [105, 263]]</data>
-    </edge>
-    <edge source="106" target="107">
-      <data key="d4">2</data>
-      <data key="d5">[[0, 278], [0, 279]]</data>
-    </edge>
-    <edge source="107" target="108">
-      <data key="d4">2</data>
-      <data key="d5">[[0, 279], [0, 280]]</data>
-    </edge>
-    <edge source="109" target="110">
-      <data key="d4">2</data>
-      <data key="d5">[[242, 287], [242, 288]]</data>
-    </edge>
-    <edge source="109" target="111">
-      <data key="d4">2</data>
-      <data key="d5">[[242, 287], [243, 288]]</data>
-    </edge>
-    <edge source="110" target="111">
-      <data key="d4">2</data>
-      <data key="d5">[[242, 288], [243, 288]]</data>
-    </edge>
-    <edge source="110" target="112">
-      <data key="d4">2</data>
-      <data key="d5">[[242, 288], [242, 289]]</data>
-    </edge>
-    <edge source="111" target="112">
-      <data key="d4">2</data>
-      <data key="d5">[[243, 288], [242, 289]]</data>
+    <node id="node_0">
+      <data key="id">node_0</data>
+      <data key="x">169</data>
+      <data key="y">0</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_1">
+      <data key="id">node_1</data>
+      <data key="x">124</data>
+      <data key="y">1</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_2">
+      <data key="id">node_2</data>
+      <data key="x">265</data>
+      <data key="y">1</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_3">
+      <data key="id">node_3</data>
+      <data key="x">276</data>
+      <data key="y">1</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_4">
+      <data key="id">node_4</data>
+      <data key="x">93</data>
+      <data key="y">2</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_5">
+      <data key="id">node_5</data>
+      <data key="x">295</data>
+      <data key="y">10</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_6">
+      <data key="id">node_6</data>
+      <data key="x">281</data>
+      <data key="y">13</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_7">
+      <data key="id">node_7</data>
+      <data key="x">1</data>
+      <data key="y">24</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_8">
+      <data key="id">node_8</data>
+      <data key="x">108</data>
+      <data key="y">27</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_9">
+      <data key="id">node_9</data>
+      <data key="x">108</data>
+      <data key="y">28</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_10">
+      <data key="id">node_10</data>
+      <data key="x">109</data>
+      <data key="y">28</data>
+      <data key="degree">4</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_11">
+      <data key="id">node_11</data>
+      <data key="x">257</data>
+      <data key="y">28</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_12">
+      <data key="id">node_12</data>
+      <data key="x">108</data>
+      <data key="y">29</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_13">
+      <data key="id">node_13</data>
+      <data key="x">117</data>
+      <data key="y">30</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_14">
+      <data key="id">node_14</data>
+      <data key="x">150</data>
+      <data key="y">32</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_15">
+      <data key="id">node_15</data>
+      <data key="x">150</data>
+      <data key="y">33</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_16">
+      <data key="id">node_16</data>
+      <data key="x">151</data>
+      <data key="y">33</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_17">
+      <data key="id">node_17</data>
+      <data key="x">299</data>
+      <data key="y">33</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_18">
+      <data key="id">node_18</data>
+      <data key="x">110</data>
+      <data key="y">36</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_19">
+      <data key="id">node_19</data>
+      <data key="x">77</data>
+      <data key="y">38</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_20">
+      <data key="id">node_20</data>
+      <data key="x">148</data>
+      <data key="y">46</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_21">
+      <data key="id">node_21</data>
+      <data key="x">174</data>
+      <data key="y">46</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_22">
+      <data key="id">node_22</data>
+      <data key="x">141</data>
+      <data key="y">49</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_23">
+      <data key="id">node_23</data>
+      <data key="x">142</data>
+      <data key="y">49</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_24">
+      <data key="id">node_24</data>
+      <data key="x">143</data>
+      <data key="y">49</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_25">
+      <data key="id">node_25</data>
+      <data key="x">142</data>
+      <data key="y">50</data>
+      <data key="degree">4</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_26">
+      <data key="id">node_26</data>
+      <data key="x">145</data>
+      <data key="y">60</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_27">
+      <data key="id">node_27</data>
+      <data key="x">1</data>
+      <data key="y">62</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_28">
+      <data key="id">node_28</data>
+      <data key="x">108</data>
+      <data key="y">74</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_29">
+      <data key="id">node_29</data>
+      <data key="x">273</data>
+      <data key="y">75</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_30">
+      <data key="id">node_30</data>
+      <data key="x">183</data>
+      <data key="y">88</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_31">
+      <data key="id">node_31</data>
+      <data key="x">1</data>
+      <data key="y">89</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_32">
+      <data key="id">node_32</data>
+      <data key="x">104</data>
+      <data key="y">103</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_33">
+      <data key="id">node_33</data>
+      <data key="x">119</data>
+      <data key="y">107</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_34">
+      <data key="id">node_34</data>
+      <data key="x">292</data>
+      <data key="y">107</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_35">
+      <data key="id">node_35</data>
+      <data key="x">60</data>
+      <data key="y">109</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_36">
+      <data key="id">node_36</data>
+      <data key="x">237</data>
+      <data key="y">111</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_37">
+      <data key="id">node_37</data>
+      <data key="x">237</data>
+      <data key="y">112</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_38">
+      <data key="id">node_38</data>
+      <data key="x">238</data>
+      <data key="y">112</data>
+      <data key="degree">4</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_39">
+      <data key="id">node_39</data>
+      <data key="x">237</data>
+      <data key="y">113</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_40">
+      <data key="id">node_40</data>
+      <data key="x">0</data>
+      <data key="y">114</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_41">
+      <data key="id">node_41</data>
+      <data key="x">92</data>
+      <data key="y">123</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_42">
+      <data key="id">node_42</data>
+      <data key="x">223</data>
+      <data key="y">130</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_43">
+      <data key="id">node_43</data>
+      <data key="x">53</data>
+      <data key="y">143</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_44">
+      <data key="id">node_44</data>
+      <data key="x">82</data>
+      <data key="y">168</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_45">
+      <data key="id">node_45</data>
+      <data key="x">25</data>
+      <data key="y">177</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_46">
+      <data key="id">node_46</data>
+      <data key="x">53</data>
+      <data key="y">177</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_47">
+      <data key="id">node_47</data>
+      <data key="x">40</data>
+      <data key="y">179</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_48">
+      <data key="id">node_48</data>
+      <data key="x">279</data>
+      <data key="y">179</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_49">
+      <data key="id">node_49</data>
+      <data key="x">18</data>
+      <data key="y">181</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_50">
+      <data key="id">node_50</data>
+      <data key="x">34</data>
+      <data key="y">181</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_51">
+      <data key="id">node_51</data>
+      <data key="x">114</data>
+      <data key="y">181</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_52">
+      <data key="id">node_52</data>
+      <data key="x">17</data>
+      <data key="y">182</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_53">
+      <data key="id">node_53</data>
+      <data key="x">18</data>
+      <data key="y">182</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_54">
+      <data key="id">node_54</data>
+      <data key="x">2</data>
+      <data key="y">185</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_55">
+      <data key="id">node_55</data>
+      <data key="x">242</data>
+      <data key="y">199</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_56">
+      <data key="id">node_56</data>
+      <data key="x">66</data>
+      <data key="y">205</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_57">
+      <data key="id">node_57</data>
+      <data key="x">191</data>
+      <data key="y">209</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_58">
+      <data key="id">node_58</data>
+      <data key="x">107</data>
+      <data key="y">214</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_59">
+      <data key="id">node_59</data>
+      <data key="x">209</data>
+      <data key="y">224</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_60">
+      <data key="id">node_60</data>
+      <data key="x">146</data>
+      <data key="y">226</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_61">
+      <data key="id">node_61</data>
+      <data key="x">20</data>
+      <data key="y">230</data>
+      <data key="degree">4</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_62">
+      <data key="id">node_62</data>
+      <data key="x">19</data>
+      <data key="y">231</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_63">
+      <data key="id">node_63</data>
+      <data key="x">20</data>
+      <data key="y">231</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_64">
+      <data key="id">node_64</data>
+      <data key="x">21</data>
+      <data key="y">231</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_65">
+      <data key="id">node_65</data>
+      <data key="x">74</data>
+      <data key="y">233</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_66">
+      <data key="id">node_66</data>
+      <data key="x">1</data>
+      <data key="y">234</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_67">
+      <data key="id">node_67</data>
+      <data key="x">52</data>
+      <data key="y">249</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_68">
+      <data key="id">node_68</data>
+      <data key="x">58</data>
+      <data key="y">256</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_69">
+      <data key="id">node_69</data>
+      <data key="x">296</data>
+      <data key="y">260</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_70">
+      <data key="id">node_70</data>
+      <data key="x">105</data>
+      <data key="y">262</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_71">
+      <data key="id">node_71</data>
+      <data key="x">106</data>
+      <data key="y">262</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_72">
+      <data key="id">node_72</data>
+      <data key="x">105</data>
+      <data key="y">263</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_73">
+      <data key="id">node_73</data>
+      <data key="x">42</data>
+      <data key="y">272</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_74">
+      <data key="id">node_74</data>
+      <data key="x">0</data>
+      <data key="y">278</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_75">
+      <data key="id">node_75</data>
+      <data key="x">66</data>
+      <data key="y">278</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_76">
+      <data key="id">node_76</data>
+      <data key="x">239</data>
+      <data key="y">279</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_77">
+      <data key="id">node_77</data>
+      <data key="x">242</data>
+      <data key="y">287</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_78">
+      <data key="id">node_78</data>
+      <data key="x">242</data>
+      <data key="y">288</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_79">
+      <data key="id">node_79</data>
+      <data key="x">243</data>
+      <data key="y">288</data>
+      <data key="degree">4</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_80">
+      <data key="id">node_80</data>
+      <data key="x">242</data>
+      <data key="y">289</data>
+      <data key="degree">3</data>
+      <data key="node_type">branch</data>
+    </node>
+    <node id="node_81">
+      <data key="id">node_81</data>
+      <data key="x">229</data>
+      <data key="y">301</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_82">
+      <data key="id">node_82</data>
+      <data key="x">15</data>
+      <data key="y">302</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_83">
+      <data key="id">node_83</data>
+      <data key="x">63</data>
+      <data key="y">302</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_84">
+      <data key="id">node_84</data>
+      <data key="x">88</data>
+      <data key="y">302</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_85">
+      <data key="id">node_85</data>
+      <data key="x">195</data>
+      <data key="y">302</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <node id="node_86">
+      <data key="id">node_86</data>
+      <data key="x">258</data>
+      <data key="y">302</data>
+      <data key="degree">1</data>
+      <data key="node_type">endpoint</data>
+    </node>
+    <edge source="node_0" target="node_36">
+      <data key="length">141.50966799187802</data>
+      <data key="path_coordinates">[[169,0],[170,0],[171,0],[172,1],[173,1],[174,2],[175,3],[176,3],[177,4],[178,5],[179,6],[180,7],[181,8],[182,9],[183,10],[184,11],[185,12],[186,13],[187,14],[188,15],[189,16],[190,17],[191,18],[192,19],[193,20],[194,21],[194,22],[195,23],[196,24],[196,25],[197,26],[198,27],[198,28],[199,29],[200,30],[200,31],[201,32],[202,33],[202,34],[203,35],[204,36],[205,37],[206,38],[207,39],[208,40],[208,41],[209,42],[210,43],[210,44],[210,45],[211,46],[212,47],[213,48],[213,49],[214,50],[215,51],[216,52],[216,53],[217,54],[217,55],[218,56],[219,57],[219,58],[220,59],[221,60],[221,61],[222,62],[222,63],[222,64],[223,65],[223,66],[224,67],[224,68],[225,69],[225,70],[225,71],[226,72],[226,73],[226,74],[227,75],[227,76],[228,77],[228,78],[228,79],[229,80],[229,81],[230,82],[231,83],[231,84],[231,85],[231,86],[232,87],[232,88],[232,89],[232,90],[232,91],[233,92],[233,93],[233,94],[234,95],[234,96],[234,97],[234,98],[235,99],[235,100],[235,101],[235,102],[235,103],[236,104],[236,105],[236,106],[237,107],[237,108],[237,109],[237,110],[237,111]]</data>
+      <data key="euclidean_distance">130.17296186228538</data>
+      <data key="tortuosity">1.0870895612069282</data>
+    </edge>
+    <edge source="node_1" target="node_14">
+      <data key="length">46.698484809834994</data>
+      <data key="path_coordinates">[[124,1],[125,0],[126,1],[127,1],[128,2],[129,3],[130,4],[131,5],[132,6],[133,7],[134,8],[134,9],[135,10],[135,11],[136,12],[137,13],[138,14],[139,14],[140,14],[141,14],[142,15],[143,16],[144,16],[145,17],[146,18],[147,19],[148,20],[148,21],[148,22],[148,23],[149,24],[149,25],[149,26],[149,27],[149,28],[149,29],[150,30],[150,31],[150,32]]</data>
+      <data key="euclidean_distance">40.45985664828782</data>
+      <data key="tortuosity">1.1541930367123825</data>
+    </edge>
+    <edge source="node_2" target="node_11">
+      <data key="length">36.31370849898475</data>
+      <data key="path_coordinates">[[265,1],[264,1],[263,0],[262,0],[261,0],[260,1],[259,1],[258,2],[257,3],[257,4],[257,5],[257,6],[257,7],[257,8],[256,9],[256,10],[256,11],[256,12],[256,13],[256,14],[256,15],[256,16],[256,17],[256,18],[256,19],[256,20],[256,21],[256,22],[256,23],[256,24],[256,25],[257,26],[258,27],[257,28]]</data>
+      <data key="euclidean_distance">28.160255680657446</data>
+      <data key="tortuosity">1.2895375990470037</data>
+    </edge>
+    <edge source="node_3" target="node_6">
+      <data key="length">27.142135623730958</data>
+      <data key="path_coordinates">[[276,1],[277,1],[278,1],[279,0],[280,0],[281,0],[282,0],[283,0],[284,0],[285,0],[286,1],[287,2],[288,3],[288,4],[288,5],[288,6],[287,7],[286,8],[285,9],[284,9],[283,10],[282,11],[281,12],[281,13]]</data>
+      <data key="euclidean_distance">13.0</data>
+      <data key="tortuosity">2.087856586440843</data>
+    </edge>
+    <edge source="node_4" target="node_8">
+      <data key="length">31.213203435596434</data>
+      <data key="path_coordinates">[[93,2],[94,3],[94,4],[95,5],[96,6],[97,7],[97,8],[97,9],[98,10],[98,11],[99,12],[99,13],[99,14],[100,15],[101,16],[101,17],[102,18],[102,19],[102,20],[103,21],[104,22],[105,23],[106,24],[107,25],[108,26],[108,27]]</data>
+      <data key="euclidean_distance">29.154759474226502</data>
+      <data key="tortuosity">1.0706040453940169</data>
+    </edge>
+    <edge source="node_5" target="node_17">
+      <data key="length">24.656854249492383</data>
+      <data key="path_coordinates">[[295,10],[295,11],[296,12],[296,13],[296,14],[296,15],[296,16],[296,17],[296,18],[296,19],[296,20],[296,21],[296,22],[297,23],[297,24],[297,25],[298,26],[298,27],[299,28],[299,29],[299,30],[299,31],[299,32],[299,33]]</data>
+      <data key="euclidean_distance">23.345235059857504</data>
+      <data key="tortuosity">1.05618359319458</data>
+    </edge>
+    <edge source="node_7" target="node_19">
+      <data key="length">110.71067811865466</data>
+      <data key="path_coordinates">[[1,24],[0,23],[0,22],[0,21],[0,20],[1,19],[1,18],[2,17],[3,16],[4,15],[5,14],[5,13],[6,12],[6,11],[6,10],[7,9],[7,8],[7,7],[7,6],[7,5],[8,4],[8,3],[9,2],[10,2],[11,1],[12,1],[13,1],[14,1],[15,1],[16,2],[17,2],[18,3],[19,3],[20,4],[21,5],[22,6],[23,6],[24,6],[25,7],[26,7],[27,8],[28,9],[29,9],[30,9],[31,10],[32,10],[33,11],[34,11],[35,12],[36,13],[37,13],[38,13],[39,14],[40,14],[41,15],[42,15],[43,16],[44,17],[45,18],[46,19],[47,20],[48,21],[49,22],[50,23],[51,24],[52,25],[53,26],[54,27],[55,27],[56,27],[57,27],[58,27],[59,27],[60,26],[61,26],[62,27],[63,27],[64,28],[65,29],[66,30],[67,31],[68,31],[69,32],[70,33],[71,34],[72,35],[73,35],[74,36],[75,36],[76,37],[77,38]]</data>
+      <data key="euclidean_distance">77.27871634544663</data>
+      <data key="tortuosity">1.432615386929598</data>
+    </edge>
+    <edge source="node_8" target="node_9">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[108,27],[108,28]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_8" target="node_10">
+      <data key="length">1.4142135623730951</data>
+      <data key="path_coordinates">[[108,27],[109,28]]</data>
+      <data key="euclidean_distance">1.4142135623730951</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_9" target="node_10">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[108,28],[109,28]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_9" target="node_12">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[108,28],[108,29]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_10" target="node_13">
+      <data key="length">8.82842712474619</data>
+      <data key="path_coordinates">[[109,28],[110,28],[111,29],[112,29],[113,29],[114,29],[115,30],[116,30],[117,30]]</data>
+      <data key="euclidean_distance">8.246211251235321</data>
+      <data key="tortuosity">1.0706040453940167</data>
+    </edge>
+    <edge source="node_10" target="node_12">
+      <data key="length">1.4142135623730951</data>
+      <data key="path_coordinates">[[109,28],[108,29]]</data>
+      <data key="euclidean_distance">1.4142135623730951</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_12" target="node_18">
+      <data key="length">9.242640687119286</data>
+      <data key="path_coordinates">[[108,29],[108,30],[107,31],[107,32],[107,33],[107,34],[108,35],[109,36],[110,36]]</data>
+      <data key="euclidean_distance">7.280109889280518</data>
+      <data key="tortuosity">1.2695743371578037</data>
+    </edge>
+    <edge source="node_14" target="node_15">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[150,32],[150,33]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_14" target="node_16">
+      <data key="length">1.4142135623730951</data>
+      <data key="path_coordinates">[[150,32],[151,33]]</data>
+      <data key="euclidean_distance">1.4142135623730951</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_15" target="node_16">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[150,33],[151,33]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_15" target="node_20">
+      <data key="length">13.82842712474619</data>
+      <data key="path_coordinates">[[150,33],[149,34],[149,35],[149,36],[149,37],[149,38],[148,39],[148,40],[148,41],[148,42],[148,43],[148,44],[148,45],[148,46]]</data>
+      <data key="euclidean_distance">13.152946437965905</data>
+      <data key="tortuosity">1.0513558456248642</data>
+    </edge>
+    <edge source="node_16" target="node_21">
+      <data key="length">28.384776310850242</data>
+      <data key="path_coordinates">[[151,33],[152,33],[153,33],[154,33],[155,33],[156,33],[157,34],[158,35],[159,36],[160,37],[161,38],[162,38],[163,39],[164,39],[165,40],[166,41],[167,41],[168,42],[169,42],[170,43],[171,43],[172,44],[173,45],[174,46]]</data>
+      <data key="euclidean_distance">26.419689627245813</data>
+      <data key="tortuosity">1.0743796278960784</data>
+    </edge>
+    <edge source="node_20" target="node_24">
+      <data key="length">6.242640687119285</data>
+      <data key="path_coordinates">[[148,46],[147,47],[146,47],[145,48],[144,49],[143,49]]</data>
+      <data key="euclidean_distance">5.830951894845301</data>
+      <data key="tortuosity">1.0706040453940164</data>
+    </edge>
+    <edge source="node_20" target="node_30">
+      <data key="length">57.0832611206852</data>
+      <data key="path_coordinates">[[148,46],[149,47],[150,48],[151,49],[152,49],[153,50],[154,51],[155,52],[156,53],[157,54],[158,55],[159,56],[160,57],[160,58],[161,59],[162,60],[162,61],[163,62],[164,63],[164,64],[165,65],[166,66],[166,67],[167,68],[167,69],[168,70],[169,71],[170,72],[171,73],[172,74],[173,75],[174,76],[175,77],[176,78],[177,79],[177,80],[178,81],[178,82],[179,83],[180,84],[181,85],[182,86],[182,87],[183,88]]</data>
+      <data key="euclidean_distance">54.67174773134658</data>
+      <data key="tortuosity">1.0441089500410456</data>
+    </edge>
+    <edge source="node_22" target="node_28">
+      <data key="length">44.52691193458118</data>
+      <data key="path_coordinates">[[141,49],[140,49],[139,49],[138,50],[137,50],[136,50],[135,51],[134,51],[133,52],[132,53],[131,54],[130,54],[129,55],[128,56],[127,56],[126,57],[125,57],[124,58],[123,59],[122,59],[121,60],[120,61],[119,62],[118,63],[117,64],[116,65],[116,66],[115,67],[114,68],[113,69],[112,70],[111,70],[110,71],[109,72],[109,73],[108,74]]</data>
+      <data key="euclidean_distance">41.400483088968905</data>
+      <data key="tortuosity">1.07551672377575</data>
+    </edge>
+    <edge source="node_22" target="node_23">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[141,49],[142,49]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_22" target="node_25">
+      <data key="length">1.4142135623730951</data>
+      <data key="path_coordinates">[[141,49],[142,50]]</data>
+      <data key="euclidean_distance">1.4142135623730951</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_23" target="node_24">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[142,49],[143,49]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_23" target="node_25">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[142,49],[142,50]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_24" target="node_25">
+      <data key="length">1.4142135623730951</data>
+      <data key="path_coordinates">[[143,49],[142,50]]</data>
+      <data key="euclidean_distance">1.4142135623730951</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_25" target="node_26">
+      <data key="length">11.242640687119287</data>
+      <data key="path_coordinates">[[142,50],[143,51],[143,52],[143,53],[143,54],[143,55],[143,56],[143,57],[143,58],[144,59],[145,60]]</data>
+      <data key="euclidean_distance">10.44030650891055</data>
+      <data key="tortuosity">1.076849676541964</data>
+    </edge>
+    <edge source="node_27" target="node_41">
+      <data key="length">136.46803743153535</data>
+      <data key="path_coordinates">[[1,62],[2,61],[3,61],[4,61],[5,61],[6,61],[7,61],[8,61],[9,61],[10,61],[11,61],[12,61],[13,61],[14,61],[15,61],[16,61],[17,60],[18,60],[19,60],[20,60],[21,60],[22,60],[23,59],[24,59],[25,59],[26,59],[27,59],[28,59],[29,59],[30,59],[31,59],[32,58],[33,58],[34,58],[35,59],[36,59],[37,59],[38,59],[39,59],[40,59],[41,59],[42,59],[43,59],[44,60],[45,60],[46,60],[47,61],[48,61],[49,61],[50,62],[51,62],[52,63],[53,63],[54,64],[55,65],[56,65],[57,66],[58,67],[59,68],[60,68],[61,69],[62,70],[63,70],[64,71],[65,72],[66,73],[67,74],[68,74],[69,75],[70,76],[71,77],[72,78],[73,79],[74,80],[75,81],[75,82],[76,83],[76,84],[77,85],[77,86],[78,87],[79,88],[80,89],[81,90],[81,91],[82,92],[83,93],[84,94],[85,95],[86,95],[87,96],[88,97],[89,98],[90,99],[91,100],[92,101],[93,102],[94,103],[94,104],[93,105],[93,106],[93,107],[93,108],[93,109],[93,110],[93,111],[92,112],[92,113],[92,114],[92,115],[92,116],[92,117],[92,118],[92,119],[92,120],[92,121],[92,122],[92,123]]</data>
+      <data key="euclidean_distance">109.55363982999378</data>
+      <data key="tortuosity">1.2456732395501193</data>
+    </edge>
+    <edge source="node_29" target="node_34">
+      <data key="length">39.870057685088796</data>
+      <data key="path_coordinates">[[273,75],[274,76],[275,77],[275,78],[276,79],[276,80],[277,81],[277,82],[278,83],[278,84],[279,85],[279,86],[279,87],[279,88],[279,89],[279,90],[280,91],[281,92],[282,93],[282,94],[283,95],[284,96],[285,97],[286,98],[286,99],[287,100],[287,101],[287,102],[288,103],[289,104],[290,105],[291,106],[292,107]]</data>
+      <data key="euclidean_distance">37.21558813185679</data>
+      <data key="tortuosity">1.0713268199289792</data>
+    </edge>
+    <edge source="node_31" target="node_35">
+      <data key="length">71.28427124746186</data>
+      <data key="path_coordinates">[[1,89],[0,90],[0,91],[0,92],[1,93],[2,94],[3,95],[4,95],[5,96],[6,96],[7,96],[8,96],[9,96],[10,96],[11,96],[12,96],[13,96],[14,96],[15,96],[16,96],[17,96],[18,96],[19,96],[20,96],[21,96],[22,96],[23,97],[24,97],[25,97],[26,97],[27,97],[28,98],[29,98],[30,99],[31,99],[32,100],[33,100],[34,101],[35,101],[36,102],[37,102],[38,102],[39,102],[40,102],[41,102],[42,102],[43,102],[44,102],[45,102],[46,101],[47,101],[48,102],[49,102],[50,102],[51,103],[52,103],[53,104],[54,104],[55,105],[56,106],[57,106],[58,107],[59,108],[60,109]]</data>
+      <data key="euclidean_distance">62.297672508690084</data>
+      <data key="tortuosity">1.1442525599574882</data>
+    </edge>
+    <edge source="node_32" target="node_33">
+      <data key="length">16.656854249492383</data>
+      <data key="path_coordinates">[[104,103],[105,103],[106,103],[107,104],[108,104],[109,105],[110,105],[111,105],[112,105],[113,105],[114,105],[115,106],[116,107],[117,107],[118,107],[119,107]]</data>
+      <data key="euclidean_distance">15.524174696260024</data>
+      <data key="tortuosity">1.0729623039803358</data>
+    </edge>
+    <edge source="node_36" target="node_37">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[237,111],[237,112]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_36" target="node_38">
+      <data key="length">1.4142135623730951</data>
+      <data key="path_coordinates">[[237,111],[238,112]]</data>
+      <data key="euclidean_distance">1.4142135623730951</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_37" target="node_38">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[237,112],[238,112]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_37" target="node_39">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[237,112],[237,113]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_38" target="node_48">
+      <data key="length">84.56854249492375</data>
+      <data key="path_coordinates">[[238,112],[239,112],[240,113],[241,114],[242,115],[243,116],[244,117],[244,118],[245,119],[246,120],[246,121],[247,122],[248,123],[248,124],[249,125],[249,126],[250,127],[250,128],[251,129],[252,130],[252,131],[253,132],[254,133],[254,134],[254,135],[254,136],[255,137],[255,138],[256,139],[257,140],[258,141],[258,142],[259,143],[260,144],[260,145],[261,146],[261,147],[261,148],[262,149],[262,150],[263,151],[263,152],[264,153],[264,154],[265,155],[265,156],[266,157],[267,158],[268,159],[269,160],[269,161],[270,162],[271,163],[271,164],[271,165],[272,166],[273,167],[273,168],[274,169],[275,170],[275,171],[276,172],[276,173],[277,174],[277,175],[277,176],[278,177],[278,178],[279,179]]</data>
+      <data key="euclidean_distance">78.54934754662193</data>
+      <data key="tortuosity">1.0766294709797457</data>
+    </edge>
+    <edge source="node_38" target="node_39">
+      <data key="length">1.4142135623730951</data>
+      <data key="path_coordinates">[[238,112],[237,113]]</data>
+      <data key="euclidean_distance">1.4142135623730951</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_39" target="node_42">
+      <data key="length">24.55634918610405</data>
+      <data key="path_coordinates">[[237,113],[236,114],[235,115],[235,116],[235,117],[234,118],[234,119],[233,120],[233,121],[233,122],[232,123],[231,124],[231,125],[230,126],[229,127],[228,128],[227,129],[226,129],[225,130],[224,130],[223,130]]</data>
+      <data key="euclidean_distance">22.02271554554524</data>
+      <data key="tortuosity">1.1150463772425792</data>
+    </edge>
+    <edge source="node_40" target="node_43">
+      <data key="length">71.4974746830583</data>
+      <data key="path_coordinates">[[0,114],[0,115],[0,116],[1,117],[1,118],[2,119],[3,120],[4,121],[5,122],[6,123],[7,124],[8,125],[9,126],[10,127],[11,128],[11,129],[12,130],[13,131],[14,132],[15,133],[16,134],[17,134],[18,135],[19,136],[20,137],[21,138],[22,139],[23,140],[24,141],[25,141],[26,142],[27,142],[28,143],[29,143],[30,144],[31,144],[32,145],[33,145],[34,146],[35,146],[36,146],[37,147],[38,147],[39,147],[40,147],[41,147],[42,148],[43,148],[44,148],[45,148],[46,148],[47,148],[48,147],[49,146],[50,145],[51,144],[52,144],[53,143]]</data>
+      <data key="euclidean_distance">60.41522986797286</data>
+      <data key="tortuosity">1.1834346213579554</data>
+    </edge>
+    <edge source="node_44" target="node_58">
+      <data key="length">56.355339059327356</data>
+      <data key="path_coordinates">[[82,168],[82,169],[83,170],[83,171],[84,172],[84,173],[85,174],[86,175],[87,176],[88,177],[89,178],[90,179],[91,180],[92,181],[92,182],[93,183],[93,184],[93,185],[94,186],[94,187],[94,188],[94,189],[95,190],[96,191],[96,192],[97,193],[97,194],[98,195],[98,196],[99,197],[99,198],[100,199],[100,200],[101,201],[102,202],[102,203],[102,204],[103,205],[103,206],[104,207],[104,208],[105,209],[105,210],[106,211],[106,212],[106,213],[107,214]]</data>
+      <data key="euclidean_distance">52.354560450833695</data>
+      <data key="tortuosity">1.0764170031042626</data>
+    </edge>
+    <edge source="node_45" target="node_49">
+      <data key="length">8.65685424949238</data>
+      <data key="path_coordinates">[[25,177],[24,178],[23,178],[22,178],[21,179],[20,179],[19,180],[18,181]]</data>
+      <data key="euclidean_distance">8.06225774829855</data>
+      <data key="tortuosity">1.0737506192132487</data>
+    </edge>
+    <edge source="node_46" target="node_47">
+      <data key="length">14.656854249492381</data>
+      <data key="path_coordinates">[[53,177],[52,177],[51,177],[50,177],[49,178],[48,178],[47,179],[46,178],[45,178],[44,178],[43,179],[42,179],[41,179],[40,179]]</data>
+      <data key="euclidean_distance">13.152946437965905</data>
+      <data key="tortuosity">1.1143399935991114</data>
+    </edge>
+    <edge source="node_49" target="node_52">
+      <data key="length">1.4142135623730951</data>
+      <data key="path_coordinates">[[18,181],[17,182]]</data>
+      <data key="euclidean_distance">1.4142135623730951</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_49" target="node_53">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[18,181],[18,182]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_50" target="node_53">
+      <data key="length">18.07106781186548</data>
+      <data key="path_coordinates">[[34,181],[33,181],[32,182],[31,182],[30,183],[29,183],[28,183],[27,183],[26,183],[25,184],[24,184],[23,184],[22,184],[21,184],[20,183],[19,183],[18,182]]</data>
+      <data key="euclidean_distance">16.0312195418814</data>
+      <data key="tortuosity">1.1272422390982169</data>
+    </edge>
+    <edge source="node_51" target="node_71">
+      <data key="length">98.01219330881972</data>
+      <data key="path_coordinates">[[114,181],[115,182],[116,183],[117,184],[118,185],[119,185],[120,185],[121,186],[122,187],[123,188],[123,189],[123,190],[123,191],[123,192],[123,193],[122,194],[122,195],[122,196],[121,197],[120,198],[120,199],[120,200],[119,201],[119,202],[119,203],[119,204],[118,205],[118,206],[117,207],[117,208],[116,209],[115,210],[115,211],[115,212],[114,213],[114,214],[113,215],[113,216],[113,217],[113,218],[112,219],[112,220],[112,221],[112,222],[112,223],[112,224],[112,225],[112,226],[112,227],[112,228],[113,229],[113,230],[113,231],[114,232],[114,233],[114,234],[115,235],[115,236],[115,237],[115,238],[115,239],[115,240],[116,241],[116,242],[116,243],[116,244],[115,245],[115,246],[115,247],[115,248],[115,249],[115,250],[114,251],[114,252],[114,253],[114,254],[114,255],[113,256],[113,257],[113,258],[112,259],[111,260],[110,261],[109,261],[108,261],[107,261],[106,262]]</data>
+      <data key="euclidean_distance">81.39410298049853</data>
+      <data key="tortuosity">1.2041682347958644</data>
+    </edge>
+    <edge source="node_52" target="node_54">
+      <data key="length">16.242640687119284</data>
+      <data key="path_coordinates">[[17,182],[16,182],[15,183],[14,183],[13,183],[12,184],[11,184],[10,184],[9,184],[8,184],[7,184],[6,184],[5,184],[4,184],[3,185],[2,185]]</data>
+      <data key="euclidean_distance">15.297058540778355</data>
+      <data key="tortuosity">1.0618146386653506</data>
+    </edge>
+    <edge source="node_52" target="node_53">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[17,182],[18,182]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_55" target="node_79">
+      <data key="length">119.8822509939085</data>
+      <data key="path_coordinates">[[242,199],[242,200],[243,201],[244,202],[245,203],[246,204],[247,205],[248,206],[249,207],[250,208],[251,209],[252,210],[253,211],[254,212],[255,213],[256,214],[257,215],[258,215],[259,216],[260,216],[261,217],[262,218],[263,219],[264,220],[265,221],[265,222],[265,223],[265,224],[265,225],[265,226],[265,227],[265,228],[265,229],[265,230],[265,231],[265,232],[266,233],[266,234],[267,235],[267,236],[267,237],[268,238],[268,239],[269,240],[269,241],[269,242],[270,243],[270,244],[271,245],[271,246],[272,247],[272,248],[272,249],[272,250],[272,251],[271,252],[270,253],[270,254],[269,255],[268,256],[268,257],[268,258],[268,259],[268,260],[268,261],[268,262],[268,263],[267,264],[267,265],[267,266],[266,267],[266,268],[266,269],[265,270],[265,271],[264,272],[264,273],[264,274],[263,275],[263,276],[263,277],[262,278],[261,279],[260,280],[259,281],[258,282],[257,283],[256,283],[255,284],[254,284],[253,284],[252,284],[251,285],[250,285],[249,286],[248,286],[247,287],[246,287],[245,287],[244,288],[243,288]]</data>
+      <data key="euclidean_distance">89.00561780022652</data>
+      <data key="tortuosity">1.346906565639314</data>
+    </edge>
+    <edge source="node_56" target="node_61">
+      <data key="length">59.183766184073534</data>
+      <data key="path_coordinates">[[66,205],[65,205],[64,205],[63,205],[62,205],[61,204],[60,204],[59,203],[58,203],[57,203],[56,203],[55,203],[54,204],[53,204],[52,205],[51,205],[50,206],[49,206],[48,206],[47,207],[46,208],[45,208],[44,209],[43,210],[42,211],[41,212],[40,213],[39,214],[39,215],[38,216],[37,217],[36,218],[35,218],[34,219],[33,220],[32,221],[31,221],[30,222],[29,222],[28,223],[27,224],[26,224],[25,225],[24,225],[23,226],[22,227],[21,228],[20,229],[20,230]]</data>
+      <data key="euclidean_distance">52.354560450833695</data>
+      <data key="tortuosity">1.1304414682203887</data>
+    </edge>
+    <edge source="node_57" target="node_60">
+      <data key="length">181.43860018001266</data>
+      <data key="path_coordinates">[[191,209],[191,210],[190,211],[190,212],[189,213],[189,214],[188,215],[188,216],[187,217],[187,218],[187,219],[187,220],[187,221],[186,222],[185,223],[185,224],[184,225],[184,226],[183,227],[182,228],[182,229],[181,230],[181,231],[180,232],[180,233],[179,234],[179,235],[178,236],[178,237],[178,238],[178,239],[178,240],[178,241],[178,242],[178,243],[178,244],[178,245],[178,246],[178,247],[178,248],[178,249],[178,250],[178,251],[178,252],[178,253],[178,254],[178,255],[177,256],[177,257],[177,258],[176,259],[176,260],[175,261],[175,262],[174,263],[173,264],[172,265],[171,266],[170,267],[169,268],[168,269],[167,270],[166,271],[165,272],[164,273],[163,274],[162,275],[161,276],[161,277],[160,278],[160,279],[159,280],[158,281],[157,282],[156,283],[156,284],[155,285],[154,286],[154,287],[153,288],[153,289],[153,290],[153,291],[153,292],[153,293],[152,294],[151,295],[150,296],[149,295],[148,294],[147,293],[147,292],[147,291],[146,290],[146,289],[146,288],[146,287],[145,286],[144,285],[144,284],[144,283],[143,282],[143,281],[143,280],[143,279],[143,278],[143,277],[143,276],[143,275],[143,274],[143,273],[143,272],[143,271],[143,270],[144,269],[144,268],[144,267],[144,266],[144,265],[144,264],[144,263],[144,262],[144,261],[144,260],[144,259],[144,258],[143,257],[143,256],[144,255],[144,254],[144,253],[144,252],[144,251],[145,250],[145,249],[145,248],[145,247],[145,246],[144,245],[145,244],[145,243],[145,242],[145,241],[145,240],[146,239],[146,238],[147,237],[147,236],[148,235],[148,234],[148,233],[148,232],[148,231],[148,230],[148,229],[147,228],[146,227],[146,226]]</data>
+      <data key="euclidean_distance">48.104053883222775</data>
+      <data key="tortuosity">3.771794381830528</data>
+    </edge>
+    <edge source="node_59" target="node_85">
+      <data key="length">92.66904755831207</data>
+      <data key="path_coordinates">[[209,224],[210,224],[211,225],[212,226],[213,227],[213,228],[214,229],[214,230],[214,231],[214,232],[214,233],[214,234],[214,235],[215,236],[215,237],[215,238],[216,239],[216,240],[217,241],[218,242],[218,243],[218,244],[218,245],[219,246],[219,247],[219,248],[219,249],[219,250],[219,251],[219,252],[219,253],[218,254],[218,255],[218,256],[217,257],[217,258],[217,259],[216,260],[216,261],[216,262],[215,263],[215,264],[214,265],[214,266],[213,267],[212,268],[212,269],[211,270],[211,271],[211,272],[210,273],[210,274],[209,275],[209,276],[208,277],[207,278],[207,279],[206,280],[206,281],[205,282],[205,283],[204,284],[204,285],[203,286],[203,287],[202,288],[202,289],[201,290],[201,291],[200,292],[200,293],[199,294],[198,295],[198,296],[197,297],[197,298],[197,299],[196,300],[196,301],[195,302]]</data>
+      <data key="euclidean_distance">79.2464510246358</data>
+      <data key="tortuosity">1.169377888348634</data>
+    </edge>
+    <edge source="node_61" target="node_62">
+      <data key="length">1.4142135623730951</data>
+      <data key="path_coordinates">[[20,230],[19,231]]</data>
+      <data key="euclidean_distance">1.4142135623730951</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_61" target="node_63">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[20,230],[20,231]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_61" target="node_64">
+      <data key="length">1.4142135623730951</data>
+      <data key="path_coordinates">[[20,230],[21,231]]</data>
+      <data key="euclidean_distance">1.4142135623730951</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_62" target="node_66">
+      <data key="length">19.242640687119287</data>
+      <data key="path_coordinates">[[19,231],[18,231],[17,231],[16,231],[15,231],[14,231],[13,231],[12,231],[11,232],[10,232],[9,232],[8,232],[7,232],[6,232],[5,233],[4,233],[3,233],[2,233],[1,234]]</data>
+      <data key="euclidean_distance">18.24828759089466</data>
+      <data key="tortuosity">1.0544902140144252</data>
+    </edge>
+    <edge source="node_62" target="node_63">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[19,231],[20,231]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_63" target="node_64">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[20,231],[21,231]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_64" target="node_67">
+      <data key="length">38.4558441227157</data>
+      <data key="path_coordinates">[[21,231],[22,232],[23,233],[24,233],[25,233],[26,233],[27,234],[28,234],[29,235],[30,235],[31,235],[32,236],[33,236],[34,237],[35,237],[36,237],[37,238],[38,238],[39,239],[40,239],[41,240],[42,241],[43,241],[44,241],[45,242],[46,243],[47,244],[48,245],[49,246],[50,247],[51,248],[52,249]]</data>
+      <data key="euclidean_distance">35.84689665786984</data>
+      <data key="tortuosity">1.0727802880608102</data>
+    </edge>
+    <edge source="node_65" target="node_70">
+      <data key="length">43.597979746446654</data>
+      <data key="path_coordinates">[[74,233],[75,233],[76,233],[77,234],[78,235],[79,236],[80,237],[81,238],[82,239],[83,239],[84,240],[85,241],[86,242],[87,243],[88,244],[89,245],[90,246],[91,247],[92,248],[93,249],[94,250],[95,251],[96,252],[97,253],[98,254],[99,255],[100,256],[101,257],[101,258],[102,259],[103,260],[104,261],[105,262]]</data>
+      <data key="euclidean_distance">42.44997055358225</data>
+      <data key="tortuosity">1.0270438160001865</data>
+    </edge>
+    <edge source="node_68" target="node_75">
+      <data key="length">25.313708498984763</data>
+      <data key="path_coordinates">[[58,256],[58,257],[59,258],[60,259],[60,260],[61,261],[61,262],[61,263],[61,264],[62,265],[62,266],[62,267],[63,268],[63,269],[63,270],[63,271],[64,272],[64,273],[65,274],[65,275],[66,276],[66,277],[66,278]]</data>
+      <data key="euclidean_distance">23.40939982143925</data>
+      <data key="tortuosity">1.0813480350658742</data>
+    </edge>
+    <edge source="node_69" target="node_86">
+      <data key="length">63.84062043356591</data>
+      <data key="path_coordinates">[[296,260],[296,261],[296,262],[296,263],[296,264],[296,265],[297,266],[297,267],[297,268],[296,269],[296,270],[296,271],[295,272],[295,273],[294,274],[293,275],[292,276],[291,277],[291,278],[290,279],[289,280],[288,281],[287,282],[286,283],[285,283],[284,284],[283,284],[282,285],[281,286],[280,287],[279,288],[278,289],[277,289],[276,290],[275,291],[274,292],[273,293],[272,293],[271,294],[270,295],[269,295],[268,296],[267,296],[266,297],[265,298],[264,299],[263,299],[262,300],[261,301],[260,302],[259,302],[258,302]]</data>
+      <data key="euclidean_distance">56.639209034025185</data>
+      <data key="tortuosity">1.1271453384035532</data>
+    </edge>
+    <edge source="node_70" target="node_71">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[105,262],[106,262]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_70" target="node_72">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[105,262],[105,263]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_71" target="node_72">
+      <data key="length">1.4142135623730951</data>
+      <data key="path_coordinates">[[106,262],[105,263]]</data>
+      <data key="euclidean_distance">1.4142135623730951</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_72" target="node_84">
+      <data key="length">46.04163056034262</data>
+      <data key="path_coordinates">[[105,263],[105,264],[104,265],[104,266],[104,267],[104,268],[104,269],[104,270],[103,271],[102,272],[101,273],[100,274],[99,275],[98,276],[97,277],[96,278],[95,279],[94,280],[94,281],[94,282],[94,283],[93,284],[93,285],[92,286],[92,287],[91,288],[90,289],[90,290],[90,291],[90,292],[90,293],[90,294],[90,295],[90,296],[89,297],[89,298],[89,299],[89,300],[89,301],[88,302]]</data>
+      <data key="euclidean_distance">42.5440947723653</data>
+      <data key="tortuosity">1.082209665211849</data>
+    </edge>
+    <edge source="node_73" target="node_83">
+      <data key="length">39.8700576850888</data>
+      <data key="path_coordinates">[[42,272],[43,273],[43,274],[44,275],[44,276],[45,277],[45,278],[46,279],[46,280],[47,281],[47,282],[47,283],[47,284],[48,285],[49,286],[50,287],[51,288],[52,289],[52,290],[53,291],[53,292],[54,293],[54,294],[55,295],[56,296],[57,297],[57,298],[58,299],[59,300],[60,301],[61,302],[62,302],[63,302]]</data>
+      <data key="euclidean_distance">36.61966684720111</data>
+      <data key="tortuosity">1.0887607976186742</data>
+    </edge>
+    <edge source="node_74" target="node_82">
+      <data key="length">30.213203435596434</data>
+      <data key="path_coordinates">[[0,278],[0,279],[0,280],[1,281],[2,282],[3,283],[4,284],[5,285],[6,286],[7,287],[7,288],[8,289],[9,290],[9,291],[10,292],[11,293],[12,294],[12,295],[12,296],[12,297],[12,298],[12,299],[13,300],[14,301],[15,302]]</data>
+      <data key="euclidean_distance">28.30194339616981</data>
+      <data key="tortuosity">1.0675310529977697</data>
+    </edge>
+    <edge source="node_76" target="node_77">
+      <data key="length">9.242640687119286</data>
+      <data key="path_coordinates">[[239,279],[239,280],[240,281],[240,282],[240,283],[240,284],[240,285],[241,286],[242,287]]</data>
+      <data key="euclidean_distance">8.54400374531753</data>
+      <data key="tortuosity">1.0817692691420737</data>
+    </edge>
+    <edge source="node_77" target="node_78">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[242,287],[242,288]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_77" target="node_79">
+      <data key="length">1.4142135623730951</data>
+      <data key="path_coordinates">[[242,287],[243,288]]</data>
+      <data key="euclidean_distance">1.4142135623730951</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_78" target="node_79">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[242,288],[243,288]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_78" target="node_80">
+      <data key="length">1.0</data>
+      <data key="path_coordinates">[[242,288],[242,289]]</data>
+      <data key="euclidean_distance">1.0</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_79" target="node_80">
+      <data key="length">1.4142135623730951</data>
+      <data key="path_coordinates">[[243,288],[242,289]]</data>
+      <data key="euclidean_distance">1.4142135623730951</data>
+      <data key="tortuosity">1.0</data>
+    </edge>
+    <edge source="node_80" target="node_81">
+      <data key="length">18.55634918610405</data>
+      <data key="path_coordinates">[[242,289],[241,290],[241,291],[240,292],[239,293],[238,294],[237,294],[236,295],[235,296],[234,297],[233,298],[232,299],[231,300],[230,301],[229,301]]</data>
+      <data key="euclidean_distance">17.69180601295413</data>
+      <data key="tortuosity">1.0488668693584415</data>
     </edge>
   </graph>
 </graphml>

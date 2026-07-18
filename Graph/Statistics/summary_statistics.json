@@ -1,0 +1,146 @@
+{
+  "number_of_nodes": {
+    "mean": 114.5,
+    "std": 25.517700939239997,
+    "minimum": 55.0,
+    "maximum": 168.0
+  },
+  "number_of_edges": {
+    "mean": 127.4,
+    "std": 37.76944018972081,
+    "minimum": 42.0,
+    "maximum": 207.0
+  },
+  "number_of_connected_components": {
+    "mean": 16.02,
+    "std": 3.8358672488787207,
+    "minimum": 3.0,
+    "maximum": 24.0
+  },
+  "number_of_endpoints": {
+    "mean": 50.54,
+    "std": 6.698187388071066,
+    "minimum": 36.0,
+    "maximum": 69.0
+  },
+  "number_of_branch_points": {
+    "mean": 63.96,
+    "std": 22.674232430812967,
+    "minimum": 13.0,
+    "maximum": 113.0
+  },
+  "number_of_isolated_nodes": {
+    "mean": 0.0,
+    "std": 0.0,
+    "minimum": 0.0,
+    "maximum": 0.0
+  },
+  "average_node_degree": {
+    "mean": 2.186904116336557,
+    "std": 0.2162299691311388,
+    "minimum": 1.5272727272727273,
+    "maximum": 2.5945945945945947
+  },
+  "maximum_node_degree": {
+    "mean": 4.22,
+    "std": 0.5066899385990914,
+    "minimum": 4.0,
+    "maximum": 6.0
+  },
+  "minimum_node_degree": {
+    "mean": 1.0,
+    "std": 0.0,
+    "minimum": 1.0,
+    "maximum": 1.0
+  },
+  "average_edge_length": {
+    "mean": 20.66915747912068,
+    "std": 5.425009292474467,
+    "minimum": 13.807925302874647,
+    "maximum": 38.24390157562844
+  },
+  "maximum_edge_length": {
+    "mean": 162.15027406794417,
+    "std": 30.746935845361467,
+    "minimum": 110.15432893255063,
+    "maximum": 266.8233764908632
+  },
+  "minimum_edge_length": {
+    "mean": 1.0,
+    "std": 0.0,
+    "minimum": 1.0,
+    "maximum": 1.0
+  },
+  "total_vessel_length": {
+    "mean": 2447.757751680771,
+    "std": 275.9032930219731,
+    "minimum": 1606.2438661763947,
+    "maximum": 3166.889752606343
+  },
+  "graph_density": {
+    "mean": 0.01994865649427024,
+    "std": 0.0033169840207502663,
+    "minimum": 0.01466275659824047,
+    "maximum": 0.028282828282828285
+  },
+  "average_clustering_coefficient": {
+    "mean": 0.20219029617198525,
+    "std": 0.03565603004457196,
+    "minimum": 0.0903030303030303,
+    "maximum": 0.25878378378378375
+  },
+  "graph_transitivity": {
+    "mean": 0.36990123309808487,
+    "std": 0.0146664872569528,
+    "minimum": 0.3391304347826087,
+    "maximum": 0.40106951871657753
+  },
+  "diameter": {
+    "mean": 14.72,
+    "std": 7.387358203342369,
+    "minimum": 4.0,
+    "maximum": 37.0
+  },
+  "average_shortest_path_length": {
+    "mean": 5.9339016038275005,
+    "std": 2.5565817397820223,
+    "minimum": 2.0,
+    "maximum": 13.28972783143108
+  },
+  "largest_connected_component_size": {
+    "mean": 33.14,
+    "std": 17.233107670991902,
+    "minimum": 9.0,
+    "maximum": 75.0
+  },
+  "number_of_small_connected_components": {
+    "mean": 9.54,
+    "std": 3.8977230401811753,
+    "minimum": 1.0,
+    "maximum": 18.0
+  },
+  "endpoint_to_branch_ratio": {
+    "mean": 0.9210016409402709,
+    "std": 0.4648846493714333,
+    "minimum": 0.37894736842105264,
+    "maximum": 3.230769230769231
+  },
+  "branch_point_density": {
+    "mean": 0.5415874462498105,
+    "std": 0.09482747128200233,
+    "minimum": 0.23636363636363636,
+    "maximum": 0.7251908396946565
+  },
+  "average_vessel_segment_length": {
+    "mean": 20.66915747912068,
+    "std": 5.425009292474467,
+    "minimum": 13.807925302874647,
+    "maximum": 38.24390157562844
+  },
+  "number_of_vessel_segments": {
+    "mean": 127.4,
+    "std": 37.76944018972081,
+    "minimum": 42.0,
+    "maximum": 207.0
+  }
+}
